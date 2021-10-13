@@ -4,10 +4,13 @@
 
 #ifndef TIME_H
 #define TIME_H
+#include <iostream>
+using namespace std;
 
 class Time
 {
-            
+      friend ostream& operator<<(ostream&, const Time& right);
+    
       private:
               int hour;  //0-23 (24 hour clock format)
               int minute; //0-59

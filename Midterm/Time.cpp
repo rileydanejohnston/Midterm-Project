@@ -2,16 +2,23 @@
 // CS137
 // Midterm
 
-#include <iostream>
 #include <iomanip>
-using namespace std;
-
 #include "Time.h"
 
 
 Time::Time(int hour, int minute)
 {
  setTime(hour, minute);
+}
+
+
+ostream& operator<<(ostream& output, const Time& right)
+{
+    output << ((right.hour == 0 || right.hour == 12) ? 12 : right.hour % 12) << ":"
+         << setfill ('0') << setw(2) << right.minute << " "
+         << setw(2) << (right.hour < 12 ? "AM" : "PM" );
+    
+    return output;
 }
 
 
@@ -68,6 +75,6 @@ void Time::printUniversal()const  //must be const since prototype is const
 void Time::printStandard()const  //must be const since prototype is const
 {
      cout << ((hour == 0 || hour == 12) ? 12 : hour % 12) << ":"
-          << setfill ('0') << setw(2) << minute << ":"
+          << setfill ('0') << setw(2) << minute << " "
           << setw(2) << (hour < 12 ? "AM" : "PM" )<< endl;
 }
