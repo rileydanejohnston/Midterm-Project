@@ -19,6 +19,8 @@ class Time
     public:
         //default constructor
         Time(int = 0, int = 0);
+    
+        double operator-(const Time&) const;
 
         //set functions - not const since they modify private data
         //The & return type enables cascading

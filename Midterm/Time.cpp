@@ -11,6 +11,69 @@ Time::Time(int hour, int minute)
     setTime(hour, minute);
 }
 
+double Time::operator-(const Time& right) const
+{
+    double timeDifference = 0.0;
+    
+    int resultHr = 0;
+    int resultMin = 0;
+    
+    int startHr = 0;
+    int endHr = 0;
+    int startMin = 0;
+    int endMin = 0;
+    
+    
+    if (getHour() > right.getHour())            // left is larger by hour
+    {
+        endHr = getHour();
+        endMin = getMinute();
+        startHr = right.getHour();
+        startMin = right.getMinute();
+        cout << "left is larger" << endl;
+    }
+    else if (getHour() < right.getHour())       // right larger by hour
+    {
+        endHr = right.getHour();
+        endMin = right.getMinute();
+        startHr = getHour();
+        startMin = getMinute();
+        cout << "right is larger" << endl;
+    }
+    else if (getHour() == right.getHour() && getMinute() > right.getMinute())       // left larger by minutes
+    {
+        startHr = right.getHour();
+        startMin = right.getMinute();
+        endHr = getHour();
+        endMin = getMinute();
+        cout << "hours equal, left min larger" << endl;
+    }
+    else if (getHour() == right.getHour() && getMinute() < right.getMinute())       // right larger by minutes
+    {
+        endHr = right.getHour();
+        endMin = right.getMinute();
+        startHr = getHour();
+        startMin = getMinute();
+        cout << "hours equal, right min larger" << endl;
+    }
+    
+    
+    if (startMin > endMin)                  // left hours/mins > right hours/mins
+    {
+        endHr = endHr - 1;
+        endMin = endMin + 60;
+    }
+    
+    
+    resultHr = endHr - startHr;
+    resultMin = endMin - startMin;
+    
+    
+    timeDifference = resultHr + (resultMin / 60.0);
+    
+    return timeDifference;
+}
+
 
 ostream& operator<<(ostream& output, const Time& right)
 {
@@ -24,9 +87,9 @@ ostream& operator<<(ostream& output, const Time& right)
 
 istream& operator>>(istream& input, Time& right)
 {
-    int hr;
-    int min;
-    char amPm;
+    int hr = 0;
+    int min = 0;
+    char amPm = 0;
     
     input >> hr;
     input.ignore();                     // ignore colon
@@ -38,14 +101,14 @@ istream& operator>>(istream& input, Time& right)
     {
         hr = 0;
         min = 0;
-        amPm = 'a';
+        amPm = 'a';             // set to 'a' so we don't convert to universal
     }
     
     if (min < 0 || min > 59)
     {
         min = 0;
         hr = 0;
-        amPm = 'a';
+        amPm = 'a';             // set to 'a' so we don't convert to universal
     }
     
     if (amPm == 'p' || amPm == 'P')             // both cases will have m (am, pm) do we care about inputting that?

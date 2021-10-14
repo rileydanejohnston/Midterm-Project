@@ -10,18 +10,20 @@ int main()
 {
     // Time myTime(15, 6);
     Time newTime1;
-    Time newTime2;
-    Time newTime3;
-    Time newTime4;
-    Time newTime5;
+    Time newTime2(6, 35);
+    
     
     cout << "Enter a time in this format HH:MM AM (or PM)" << endl;
     cin >> newTime1;
     
     //cout << "universal:  " << newTime1.getHour() << ":" << newTime1.getMinute() << endl;
     
+    newTime2.printUniversal();
     newTime1.printUniversal();
-    newTime1.printStandard();
+    
+    // cout << newTime2 - newTime1 << " hours" << endl;
+    // cout << newTime1 - newTime2 << " hours" << endl;
+    
     
     //cout << myTime << endl;
     return 0;
