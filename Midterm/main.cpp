@@ -32,7 +32,7 @@ int main()
     //cin >> birthday;
     
     
-    if (birthday == deathDay)
+    if (birthday != deathDay)
     {
         cout << "True" << endl;
     }

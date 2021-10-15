@@ -19,6 +19,7 @@ class Date
     public:
         Date(int = 1, int = 1, int = 1990);
     
+        bool operator!=(const Date&) const;
         bool operator==(const Date&) const;
         bool operator>(const Date&) const;
         int getMonth() const;
