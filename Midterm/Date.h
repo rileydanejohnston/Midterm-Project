@@ -21,6 +21,7 @@ class Date
     
         bool operator!=(const Date&) const;
         bool operator==(const Date&) const;
+        bool operator<(const Date&) const;
         bool operator>(const Date&) const;
         int getMonth() const;
         int getDay() const;

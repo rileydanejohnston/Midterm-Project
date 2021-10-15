@@ -19,6 +19,14 @@ bool Date::operator==(const Date& right) const
     }
     return false;
 }
+bool Date::operator<(const Date& right) const
+{
+    if (!(*this > right) && *this != right)
+    {
+        return true;
+    }
+    return false;
+}
 
 bool Date::operator>(const Date& right) const
 {

@@ -21,9 +21,6 @@ int main()
     // cout << newTime1 - newTime2 << " hours" << endl;
     // cout << myTime << endl;
     
-    Date birthday(2,20,2030);
-    Date deathDay(2,20,2030);
-    
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;
     // cout << birthday.getYear() << endl;
@@ -31,8 +28,11 @@ int main()
     //cout << "Enter a date in this format MM/DD/YYYY -> ";
     //cin >> birthday;
     
+    Date birthday(2,20,2030);
+    Date deathDay(2,20,2030);
     
-    if (birthday != deathDay)
+    
+    if (birthday < deathDay)
     {
         cout << "True" << endl;
     }
