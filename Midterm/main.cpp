@@ -32,7 +32,7 @@ int main()
     Date deathDay(2,20,2030);
     
     
-    if (birthday >= deathDay)
+    if (birthday <= deathDay)
     {
         cout << "True" << endl;
     }
