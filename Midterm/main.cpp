@@ -21,15 +21,28 @@ int main()
     // cout << newTime1 - newTime2 << " hours" << endl;
     // cout << myTime << endl;
     
-    Date birthday;
-    //birthday.setMonth(13).setDay(30).setYear(2021);
+    Date birthday(2,20,2030);
+    Date deathDay(1,1,1990);
+    
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;
     // cout << birthday.getYear() << endl;
     
-    cout << "Enter a date in this format MM/DD/YYYY -> ";
-    cin >> birthday;
-    cout << birthday << endl;
+    //cout << "Enter a date in this format MM/DD/YYYY -> ";
+    //cin >> birthday;
+    
+    
+    if (birthday > deathDay)
+    {
+        cout << "True" << endl;
+    }
+    else
+    {
+        cout << "False" << endl;
+    }
+    
+    
+    
     
     return 0;
 }

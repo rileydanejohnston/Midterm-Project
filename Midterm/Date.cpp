@@ -6,6 +6,30 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
+bool Date::operator>(const Date& right) const
+{
+    // check year
+    if (getYear() > right.getYear())
+    {
+        cout << "year is greater" << endl;
+        return true;
+    }
+    // check month (same year)
+    else if (getYear() == right.getYear() && getMonth() > right.getMonth())
+    {
+        cout << "month is greater, same year" << endl;
+        return true;
+    }
+    // check day (same year, month)
+    else if (getYear() == right.getYear() && getMonth() == right.getMonth() && getDay() > right.getDay())
+    {
+        cout << "day is greater, same year & month" << endl;
+        return true;
+    }
+    
+    return false;
+}
+
 istream& operator>>(istream& input, Date& right)
 {
     int mn = 0;
@@ -56,10 +80,8 @@ int Date::checkMonth(int mn) const
     {
         return mn;
     }
-    else
-    {
-        return 1;
-    }
+    
+    return 1;
 }
 int Date::checkYear(int dy) const
 {
@@ -67,10 +89,8 @@ int Date::checkYear(int dy) const
     {
         return dy;
     }
-    else
-    {
-        return 1990;                    // default is 1990
-    }
+    
+    return 1990;                    // default is 1990
 }
 Date& Date::setDay(int dy)
 {
