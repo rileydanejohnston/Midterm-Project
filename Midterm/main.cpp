@@ -3,6 +3,7 @@
 // Midterm
 
 #include "Time.h"
+#include "Date.h"
 #include <iostream>
 using namespace std;
 
