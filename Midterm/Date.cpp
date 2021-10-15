@@ -6,19 +6,9 @@ using namespace std;
 Date::Date(int mn, int dy, int yr)
 {
     setDate(mn, dy, yr);
-    cout << "Date Constructor called for date: ";
-    print();
-    cout << endl;
 }
 
-//DESTRUCTOR
-Date::~Date()
-{
-    cout << "Date Destructor for date: ";
-    print();
-    cout << endl;
-    system("PAUSE");
-}
+
 
 void Date::setDate(int mn, int dy, int yr)
 {
@@ -40,11 +30,6 @@ void Date::setDate(int mn, int dy, int yr)
     cout << endl;
 }
 
-//CONST PRINT FUNCTION
-void Date::print() const
-{
-     cout << month << '/' << day << '/' << year << endl;
-}
 
 //PRIVATE COST UTILITY FUNCTION
 int Date::checkDay(int testDay) const

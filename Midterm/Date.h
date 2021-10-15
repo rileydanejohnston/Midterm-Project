@@ -15,7 +15,6 @@ class Date
         Date(int = 1, int = 1, int = 1990);
         ~Date();
         void setDate(int, int, int);
-        void print() const;
 };
 
 #endif
