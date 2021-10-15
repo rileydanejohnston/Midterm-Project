@@ -53,19 +53,16 @@ bool Date::operator>(const Date& right) const
     // check year
     if (getYear() > right.getYear())
     {
-        cout << "year is greater" << endl;
         return true;
     }
     // check month (same year)
     else if (getYear() == right.getYear() && getMonth() > right.getMonth())
     {
-        cout << "month is greater, same year" << endl;
         return true;
     }
     // check day (same year, month)
     else if (getYear() == right.getYear() && getMonth() == right.getMonth() && getDay() > right.getDay())
     {
-        cout << "day is greater, same year & month" << endl;
         return true;
     }
     
