@@ -26,5 +26,7 @@ int main()
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;
     // cout << birthday.getYear() << endl;
+    
+    cout << birthday << endl;
     return 0;
 }

@@ -1,11 +1,15 @@
 #include "Date.h"
-#include <iostream>
-using namespace std;
 
 //constructor validates month and calls utility function to validate day
 Date::Date(int mn, int dy, int yr)
 {
     setDate(mn, dy, yr);
+}
+
+ostream& operator<<(ostream& output, Date& right)
+{
+    output << right.getMonth() << '/' << right.getDay() << '/' << right.getYear();
+    return output;
 }
 
 int Date::getMonth() const
