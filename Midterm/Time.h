@@ -15,7 +15,8 @@ class Time
     private:
         int hour;  //0-23 (24 hour clock format)
         int minute; //0-59
-        int toUniversal(int);
+        int toUniversal(int, char) const;
+        int checkHours(int) const;        // validate hrs inputted in standard time (1-12)
     public:
         //default constructor
         Time(int = 0, int = 0);

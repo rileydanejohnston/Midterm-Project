@@ -10,16 +10,18 @@ using namespace std;
 int main()
 {
     // Time myTime(15, 6);
-    // Time newTime1;
+    Time newTime1;
     // Time newTime2(6, 35);
-    // cout << "Enter a time in this format HH:MM AM (or PM)" << endl;
-    // cin >> newTime1;
-    // cout << "universal:  " << newTime1.getHour() << ":" << newTime1.getMinute() << endl;
+    cout << "Enter a time in this format HH:MM AM (or PM)" << endl;
+    cin >> newTime1;
+    cout << "universal:  " << newTime1.getHour() << ":" << newTime1.getMinute() << endl;
     // newTime2.printUniversal();
     // newTime1.printUniversal();
     // cout << newTime2 - newTime1 << " hours" << endl;
     // cout << newTime1 - newTime2 << " hours" << endl;
     // cout << myTime << endl;
+    
+    
     
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;
@@ -28,10 +30,10 @@ int main()
     //cout << "Enter a date in this format MM/DD/YYYY -> ";
     //cin >> birthday;
     
-    Date birthday(2,20,2030);
-    Date deathDay(2,20,2030);
+    // Date birthday(2,20,2030);
+    // Date deathDay(2,20,2030);
     
-    
+    /*
     if (birthday <= deathDay)
     {
         cout << "True" << endl;
@@ -41,7 +43,7 @@ int main()
         cout << "False" << endl;
     }
     
-    
+    */
     
     
     return 0;

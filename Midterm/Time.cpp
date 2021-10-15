@@ -84,6 +84,15 @@ ostream& operator<<(ostream& output, const Time& right)
     return output;
 }
 
+int Time::checkHours(int hr) const
+{
+    if (hr > 12 || hr < 1)
+    {
+        return 0;
+    }
+    return hr;
+}
+
 
 istream& operator>>(istream& input, Time& right)
 {
@@ -96,39 +105,43 @@ istream& operator>>(istream& input, Time& right)
     input >> min;
     input >> amPm;
     
-    // input validataion: if one input is invalid, reset to default (00:00 am)
-    if (hr < 1 || hr > 12)
+    hr = right.checkHours(hr);        // validate hrs is standard (1-12)
+
+    // assume they meant am?
+    if (amPm != 'p' && amPm != 'P' && amPm != 'a' && amPm != 'A')
     {
-        hr = 0;
-        min = 0;
-        amPm = 'a';             // set to 'a' so we don't convert to universal
+        amPm = 'a';
     }
     
-    if (min < 0 || min > 59)
-    {
-        min = 0;
-        hr = 0;
-        amPm = 'a';             // set to 'a' so we don't convert to universal
-    }
+    // convert to universal
+    hr = right.toUniversal(hr, amPm);
     
-    if (amPm == 'p' || amPm == 'P')             // both cases will have m (am, pm) do we care about inputting that?
-    {
-        hr = right.toUniversal(hr);
-    }
-    else if (amPm != 'p' && amPm != 'P' && amPm != 'a' && amPm != 'A')  // invalid data -> reset to default 00:00 AM
-    {
-        hr = 0;
-        min = 0;
-    }
     
-    right.setTime(hr, min);
+    right.setTime(hr, min);     // validates hours & minutes
     
     return input;
 }
 
 
-int Time::toUniversal(int hr)
+int Time::toUniversal(int hr, char amPm) const
 {
+    // 12 pm
+    if ((amPm == 'p' || amPm == 'P') && hr == 12)
+    {
+        return 12;
+    }
+    // 12 am
+    else if ((amPm == 'a' || amPm == 'A') && hr == 12)
+    {
+        return 0;
+    }
+    // am - just return hr
+    else if (amPm == 'a' || amPm == 'A')
+    {
+        return hr;
+    }
+    
+    // pm - add 12 for universal time
     return hr + 12;
 }
 
