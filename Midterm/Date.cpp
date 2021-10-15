@@ -6,6 +6,16 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
+bool Date::operator>=(const Date& right) const
+{
+    // check if left is greater than right or equal to
+    if (*this > right || *this == right)
+    {
+        return true;
+    }
+    return false;
+}
+
 bool Date::operator!=(const Date& right) const
 {
     return !(*this == right);
