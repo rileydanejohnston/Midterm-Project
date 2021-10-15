@@ -15,6 +15,7 @@ class Date
         //utility function to check if day is proper for month and year
         int checkDay(int) const;
         int checkMonth(int) const;      // not in instructions
+        int checkYear(int) const;      // not in instructions
     public:
         Date(int = 1, int = 1, int = 1990);
     

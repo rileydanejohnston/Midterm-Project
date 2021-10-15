@@ -20,6 +20,7 @@ istream& operator>>(istream& input, Date& right)
     
     mn = right.checkMonth(mn);
     dy = right.checkDay(dy);
+    yr = right.checkYear(yr);
     
     right.setDate(mn, dy, yr);
     
@@ -53,23 +54,32 @@ int Date::checkMonth(int mn) const
 {
     if (mn > 0 && mn <= 12)
     {
-        mn = mn;
+        return mn;
     }
     else
     {
-        mn = 1;
+        return 1;
     }
-    
-    return mn;
+}
+int Date::checkYear(int dy) const
+{
+    if (dy >= 1990 && dy <= 2050)       // validate year is 1990 to 2050
+    {
+        return dy;
+    }
+    else
+    {
+        return 1990;                    // default is 1990
+    }
 }
 Date& Date::setDay(int dy)
 {
     day = checkDay(dy);
     return *this;
 }
-Date& Date::setYear(int yr)         // should we validate year?
+Date& Date::setYear(int yr)
 {
-    year = yr;
+    year = checkYear(yr);
     return *this;
 }
 
@@ -77,7 +87,7 @@ void Date::setDate(int mn, int dy, int yr)
 {
     month = checkMonth(mn);
  
-    year = yr;  //could also validate year              // how?
+    year = checkYear(yr);  //could also validate year              // done
  
     day = checkDay(dy);  //to validate the day
 }
