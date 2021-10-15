@@ -22,7 +22,7 @@ int main()
     // cout << myTime << endl;
     
     Date birthday(2,20,2030);
-    Date deathDay(1,1,1990);
+    Date deathDay(2,20,2030);
     
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;
@@ -32,7 +32,7 @@ int main()
     //cin >> birthday;
     
     
-    if (birthday > deathDay)
+    if (birthday == deathDay)
     {
         cout << "True" << endl;
     }

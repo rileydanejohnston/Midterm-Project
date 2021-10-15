@@ -6,6 +6,15 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
+bool Date::operator==(const Date& right) const
+{
+    if (getYear() == right.getYear() && getMonth() == right.getMonth() && getDay() == right.getDay())
+    {
+        return true;
+    }
+    return false;
+}
+
 bool Date::operator>(const Date& right) const
 {
     // check year
