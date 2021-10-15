@@ -5,7 +5,8 @@ using namespace std;
 
 class Date
 {
-    friend ostream& operator<<(ostream&, Date&);
+    friend ostream& operator<<(ostream&, const Date&);
+    friend istream& operator>>(istream&, Date&);
     private:
         int month; //1-12
         int day; //1-31 depending on month

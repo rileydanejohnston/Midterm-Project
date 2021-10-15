@@ -22,11 +22,14 @@ int main()
     // cout << myTime << endl;
     
     Date birthday;
-    birthday.setMonth(13).setDay(30).setYear(2021);
+    //birthday.setMonth(13).setDay(30).setYear(2021);
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;
     // cout << birthday.getYear() << endl;
     
+    cout << "Enter a date in this format MM/DD/YYYY -> ";
+    cin >> birthday;
     cout << birthday << endl;
+    
     return 0;
 }

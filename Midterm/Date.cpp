@@ -6,7 +6,27 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
-ostream& operator<<(ostream& output, Date& right)
+istream& operator>>(istream& input, Date& right)
+{
+    int mn = 0;
+    int dy = 0;
+    int yr = 0;
+    
+    input >> mn;
+    input.ignore();
+    input >> dy;
+    input.ignore();
+    input >> yr;
+    
+    mn = right.checkMonth(mn);
+    dy = right.checkDay(dy);
+    
+    right.setDate(mn, dy, yr);
+    
+    return input;
+}
+
+ostream& operator<<(ostream& output, const Date& right)
 {
     output << right.getMonth() << '/' << right.getDay() << '/' << right.getYear();
     return output;
