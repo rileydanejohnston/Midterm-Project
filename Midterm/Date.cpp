@@ -8,26 +8,54 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
-
-
-void Date::setDate(int mn, int dy, int yr)
+int Date::getMonth() const
+{
+    return month;
+}
+int Date::getDay() const
+{
+    return day;
+}
+int Date::getYear() const
+{
+    return year;
+}
+Date& Date::setMonth(int mn)
+{
+    month = checkMonth(mn);
+    return *this;
+}
+int Date::checkMonth(int mn) const
 {
     if (mn > 0 && mn <= 12)
     {
-        month  = mn;
+        mn = mn;
     }
-
     else
     {
-        month = 1;
-        cout << "Month set to one - INVALID" << endl;  //BAD DESIGN!
+        mn = 1;
     }
+    
+    return mn;
+}
+Date& Date::setDay(int dy)
+{
+    day = checkDay(dy);
+    return *this;
+}
+Date& Date::setYear(int yr)         // should we validate year?
+{
+    year = yr;
+    return *this;
+}
+
+void Date::setDate(int mn, int dy, int yr)
+{
+    month = checkMonth(mn);
  
-    year = yr;  //could also validate year
+    year = yr;  //could also validate year              // how?
  
     day = checkDay(dy);  //to validate the day
- 
-    cout << endl;
 }
 
 
@@ -47,6 +75,5 @@ int Date::checkDay(int testDay) const
       return testDay;
     }
     
-    cout << "Invalid Day " << testDay << " was set to 1" << endl;
     return 1;  //keep data in valid state
 }

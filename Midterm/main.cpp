@@ -10,22 +10,21 @@ using namespace std;
 int main()
 {
     // Time myTime(15, 6);
-    Time newTime1;
-    Time newTime2(6, 35);
-    
-    
-    cout << "Enter a time in this format HH:MM AM (or PM)" << endl;
-    cin >> newTime1;
-    
-    //cout << "universal:  " << newTime1.getHour() << ":" << newTime1.getMinute() << endl;
-    
-    newTime2.printUniversal();
-    newTime1.printUniversal();
-    
+    // Time newTime1;
+    // Time newTime2(6, 35);
+    // cout << "Enter a time in this format HH:MM AM (or PM)" << endl;
+    // cin >> newTime1;
+    // cout << "universal:  " << newTime1.getHour() << ":" << newTime1.getMinute() << endl;
+    // newTime2.printUniversal();
+    // newTime1.printUniversal();
     // cout << newTime2 - newTime1 << " hours" << endl;
     // cout << newTime1 - newTime2 << " hours" << endl;
+    // cout << myTime << endl;
     
-    
-    //cout << myTime << endl;
+    Date birthday;
+    birthday.setMonth(13).setDay(30).setYear(2021);
+    // cout << birthday.getMonth() << endl;
+    // cout << birthday.getDay() << endl;
+    // cout << birthday.getYear() << endl;
     return 0;
 }

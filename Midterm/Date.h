@@ -10,10 +10,15 @@ class Date
 
         //utility function to check if day is proper for month and year
         int checkDay(int) const;
-
+        int checkMonth(int) const;      // not in instructions
     public:
         Date(int = 1, int = 1, int = 1990);
-        ~Date();
+        int getMonth() const;
+        int getDay() const;
+        int getYear() const;
+        Date& setMonth(int);
+        Date& setDay(int);
+        Date& setYear(int);
         void setDate(int, int, int);
 };
 
