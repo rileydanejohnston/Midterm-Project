@@ -22,9 +22,11 @@ private:
     Time startTime;
     Time endTime;
 public:
-    Course(string, string, string, double, const Date&, const Date&, const Time&, const Time&);
+    // strings const reference?
+    Course(string = "CS 101", string = "Intro to Computers", string = "MWF", double = 3.0, const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
     ~Course();
     
+    // strings const reference?
     Course& setNumber(string);
     Course& setName(string);
     Course& setDays(string);
