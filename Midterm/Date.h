@@ -1,3 +1,8 @@
+// Riley Johnston
+// CS137
+// Midterm
+
+
 #ifndef DATE_H
 #define DATE_H
 #include <iostream>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2847924271BC26200A142D0 /* Course.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2847922271BC26200A142D0 /* Course.cpp */; };
 		C28FB73327168E1C009DCC65 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB73227168E1C009DCC65 /* main.cpp */; };
 		C28FB73F271696D8009DCC65 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB73E271696D8009DCC65 /* Time.cpp */; };
 		C28FB74227190042009DCC65 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB74127190042009DCC65 /* Date.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C2847921271BC1EF00A142D0 /* Course.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		C2847922271BC26200A142D0 /* Course.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Course.cpp; sourceTree = "<group>"; };
 		C28FB72F27168E1C009DCC65 /* Midterm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Midterm; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28FB73227168E1C009DCC65 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C28FB73D271696AB009DCC65 /* Time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				C28FB74127190042009DCC65 /* Date.cpp */,
 				C28FB73D271696AB009DCC65 /* Time.h */,
 				C28FB73227168E1C009DCC65 /* main.cpp */,
+				C2847921271BC1EF00A142D0 /* Course.h */,
+				C2847922271BC26200A142D0 /* Course.cpp */,
 			);
 			path = Midterm;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2847924271BC26200A142D0 /* Course.cpp in Sources */,
 				C28FB74227190042009DCC65 /* Date.cpp in Sources */,
 				C28FB73F271696D8009DCC65 /* Time.cpp in Sources */,
 				C28FB73327168E1C009DCC65 /* main.cpp in Sources */,

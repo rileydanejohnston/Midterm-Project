@@ -4,6 +4,7 @@
 
 #include "Time.h"
 #include "Date.h"
+#include "Course.h"
 #include <iostream>
 using namespace std;
 
@@ -14,7 +15,9 @@ int main()
     // Time newTime2(6, 35);
     cout << "Enter a time in this format HH:MM AM (or PM)" << endl;
     cin >> newTime1;
-    cout << "universal:  " << newTime1.getHour() << ":" << newTime1.getMinute() << endl;
+    
+    newTime1.printStandard();
+    newTime1.printUniversal();
     // newTime2.printUniversal();
     // newTime1.printUniversal();
     // cout << newTime2 - newTime1 << " hours" << endl;

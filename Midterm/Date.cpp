@@ -1,3 +1,7 @@
+// Riley Johnston
+// CS137
+// Midterm
+
 #include "Date.h"
 
 //constructor validates month and calls utility function to validate day
