@@ -33,7 +33,6 @@ int main()
     cout << fixed << setprecision(1) << "Units: " << sociology.getUnits() << endl;
     */
     
-    
     // Time myTime(15, 6);
     // Time newTime1;
     // Time newTime2(6, 35);
@@ -47,8 +46,6 @@ int main()
     // cout << newTime2 - newTime1 << " hours" << endl;
     // cout << newTime1 - newTime2 << " hours" << endl;
     // cout << myTime << endl;
-    
-    
     
     // cout << birthday.getMonth() << endl;
     // cout << birthday.getDay() << endl;

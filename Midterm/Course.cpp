@@ -56,3 +56,23 @@ Course& Course::setUnits(double numUnits)
     units = numUnits;
     return *this;
 }
+
+void Course::setStartDate(int mn, int dy, int yr)
+{
+    startDate.setDate(mn, dy, yr);
+}
+
+void Course::setEndDate(int mn, int dy, int yr)
+{
+    endDate.setDate(mn, dy, yr);
+}
+
+void Course::setStartTime(int hr, int min)
+{
+    startTime.setTime(hr, min);
+}
+
+void Course::setEndTime(int hr, int min)
+{
+    endTime.setTime(hr, min);
+}

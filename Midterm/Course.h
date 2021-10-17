@@ -26,16 +26,22 @@ public:
     Course(string = "CS 101", string = "Intro to Computers", string = "MWF", double = 3.0, const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
     ~Course();
     
+    string getNumber() const;
+    string getName() const;
+    string getDays() const;
+    double getUnits() const;
+    
     // strings const reference?
     Course& setNumber(string);
     Course& setName(string);
     Course& setDays(string);
     Course& setUnits(double);
     
-    string getNumber() const;
-    string getName() const;
-    string getDays() const;
-    double getUnits() const;
+    void setStartDate(int, int, int);            // void?
+    void setEndDate(int, int, int);              // void?
+    void setStartTime(int, int);                 // void?
+    void setEndTime(int, int);                   // void?
+    
     // what to do here?
         // add proper "get date" functions
         // use printDate?
