@@ -14,7 +14,7 @@ int main()
     Date endDate(4, 1, 2000);
     Time startTime(1, 0);
     Time endTime(3, 25);
-    Course biology("BIO 101", "Biology", "TTH", 4.0, startDate, endDate, startTime, endTime);
+    Course biology("BIO 101", "Biology", "TTH", 4, startDate, endDate, startTime, endTime);
     // Course sociology;
     
     

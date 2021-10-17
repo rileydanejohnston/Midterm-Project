@@ -66,7 +66,8 @@ Course& Course::setDays(string meetDays)
 }
 Course& Course::setUnits(double numUnits)
 {
-    units = numUnits;
+    // validate units? can't be 0 or negative. upper limit? i'll say 10 for now
+    units = (numUnits > 0 && numUnits <= 10) ? numUnits : 3.0;
     return *this;
 }
 
