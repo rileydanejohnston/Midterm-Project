@@ -9,10 +9,32 @@ Course::Course(string num, string title, string meetDays, double numUnits, const
 {
     setNumber(num).setName(title).setDays(meetDays).setUnits(numUnits);
 }
+
 Course::~Course()
 {
-    cout << "The course has been deleted." << endl;
+    cout << "\nThe course has been deleted." << endl;
 }
+
+string Course::getNumber() const
+{
+    return number;
+}
+
+string Course::getName() const
+{
+    return name;
+}
+
+string Course::getDays() const
+{
+    return days;
+}
+
+double Course::getUnits() const
+{
+    return units;
+}
+
 
 Course& Course::setNumber(string num)
 {

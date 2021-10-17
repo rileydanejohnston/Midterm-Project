@@ -32,6 +32,18 @@ public:
     Course& setDays(string);
     Course& setUnits(double);
     
+    string getNumber() const;
+    string getName() const;
+    string getDays() const;
+    double getUnits() const;
+    // what to do here?
+        // add proper "get date" functions
+        // use printDate?
+    // Date getStartDate() const;
+    // Date getEndDate() const;
+    // Time getStartTime() const;
+    // Time getEndTime() const;
+    
 };
 
 #endif
