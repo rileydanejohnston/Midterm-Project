@@ -30,7 +30,6 @@ double Time::operator-(const Time& right) const
         endMin = getMinute();
         startHr = right.getHour();
         startMin = right.getMinute();
-        cout << "left is larger" << endl;
     }
     else if (getHour() < right.getHour())       // right larger by hour
     {
@@ -38,7 +37,6 @@ double Time::operator-(const Time& right) const
         endMin = right.getMinute();
         startHr = getHour();
         startMin = getMinute();
-        cout << "right is larger" << endl;
     }
     else if (getHour() == right.getHour() && getMinute() > right.getMinute())       // left larger by minutes
     {
@@ -46,7 +44,6 @@ double Time::operator-(const Time& right) const
         startMin = right.getMinute();
         endHr = getHour();
         endMin = getMinute();
-        cout << "hours equal, left min larger" << endl;
     }
     else if (getHour() == right.getHour() && getMinute() < right.getMinute())       // right larger by minutes
     {
@@ -54,7 +51,6 @@ double Time::operator-(const Time& right) const
         endMin = right.getMinute();
         startHr = getHour();
         startMin = getMinute();
-        cout << "hours equal, right min larger" << endl;
     }
     
     

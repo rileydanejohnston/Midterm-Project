@@ -12,18 +12,20 @@ int main()
 {
     Date startDate(1, 1, 2000);
     Date endDate(4, 1, 2000);
-    Time startTime(13, 0);
-    Time endTime(14, 0);
+    Time startTime(1, 0);
+    Time endTime(3, 25);
     Course biology("BIO 101", "Biology", "TTH", 4.0, startDate, endDate, startTime, endTime);
     // Course sociology;
     
     
-    
+    /*
     cout << "Number: " << biology.getNumber() << endl;
     cout << "Name: " << biology.getName() << endl;
     cout << "Days: " << biology.getDays() << endl;
     cout << fixed << setprecision(1) << "Units: " << biology.getUnits() << endl;
-    
+    */
+     
+    cout << biology << endl;
     /*
     cout << endl;
     

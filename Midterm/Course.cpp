@@ -3,6 +3,7 @@
 // Midterm
 
 #include "Course.h"
+#include <iomanip>
 
 Course::Course(string num, string title, string meetDays, double numUnits, const Date &startDt, const Date &endDt, const Time &startTm, const Time &endTm)
 :startDate(startDt), endDate(endDt), startTime(startTm), endTime(endTm)
@@ -18,6 +19,18 @@ Course::~Course()
 string Course::getNumber() const
 {
     return number;
+}
+
+ostream& operator<<(ostream& output, const Course &right)
+{
+    output << fixed << setprecision(2) << "Course Info: " << setw(10) << right.getNumber() << " -- " << right.getName() << endl;
+    output << "# of Units: "    << setw(8) << right.getUnits() << endl;
+    output << "Course Dates: "  << setw(3) << right.startDate << " -- " << right.endDate << endl;
+    output << "Meeting Days: "  << setw(5) << right.getDays() << endl;
+    output << "Meeting Times: " << setw(2) << right.startTime << " -- " << right.endTime << endl;
+    output << "Daily Duration: " << right.startTime - right.endTime << " hours" << endl;
+    
+    return output;
 }
 
 string Course::getName() const
