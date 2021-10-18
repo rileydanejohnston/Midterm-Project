@@ -43,6 +43,8 @@ public:
     void setStartTime(int, int);                 // void?
     void setEndTime(int, int);                   // void?
     
+    double calcDailyDuration() const;
+    
     // what to do here?
         // add proper "get date" functions
         // use printDate?

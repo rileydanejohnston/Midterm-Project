@@ -28,7 +28,7 @@ ostream& operator<<(ostream& output, const Course &right)
     output << "Course Dates: "  << setw(3) << right.startDate << " -- " << right.endDate << endl;
     output << "Meeting Days: "  << setw(5) << right.getDays() << endl;
     output << "Meeting Times: " << setw(2) << right.startTime << " -- " << right.endTime << endl;
-    output << "Daily Duration: " << right.startTime - right.endTime << " hours" << endl;
+    output << "Daily Duration: " << right.calcDailyDuration() << " hours" << endl;
     
     return output;
 }
@@ -89,4 +89,9 @@ void Course::setStartTime(int hr, int min)
 void Course::setEndTime(int hr, int min)
 {
     endTime.setTime(hr, min);
+}
+
+double Course::calcDailyDuration() const
+{
+    return startTime - endTime;
 }
