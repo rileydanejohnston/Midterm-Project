@@ -48,6 +48,26 @@ double Course::getUnits() const
     return units;
 }
 
+string Course::getStartDate() const
+{
+    return startDate.getDate();
+}
+
+string Course::getEndDate() const
+{
+    return endDate.getDate();
+}
+
+string Course::getStartTime() const
+{
+    return startTime.getTime();
+}
+
+string Course::getEndTime() const
+{
+    return endTime.getTime();
+}
+
 
 Course& Course::setNumber(string num)
 {
