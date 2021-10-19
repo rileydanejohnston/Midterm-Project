@@ -71,24 +71,28 @@ Course& Course::setUnits(double numUnits)
     return *this;
 }
 
-void Course::setStartDate(int mn, int dy, int yr)
+Course& Course::setStartDate(int mn, int dy, int yr)
 {
     startDate.setDate(mn, dy, yr);
+    return *this;
 }
 
-void Course::setEndDate(int mn, int dy, int yr)
+Course& Course::setEndDate(int mn, int dy, int yr)
 {
     endDate.setDate(mn, dy, yr);
+    return *this;
 }
 
-void Course::setStartTime(int hr, int min)
+Course& Course::setStartTime(int hr, int min)
 {
     startTime.setTime(hr, min);
+    return *this;
 }
 
-void Course::setEndTime(int hr, int min)
+Course& Course::setEndTime(int hr, int min)
 {
     endTime.setTime(hr, min);
+    return *this;
 }
 
 double Course::calcDailyDuration() const

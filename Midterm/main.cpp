@@ -14,10 +14,11 @@ int main()
     Date endDate(4, 1, 2000);
     Time startTime(5, 0);
     Time endTime(1, 5);
-    Course biology("BIO 101", "Biology", "TTH", 4, startDate, endDate, startTime, endTime);
+    Course biology;
     // Course sociology;
     
-    
+    biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);
+    biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(12,20).setEndTime(13,55);
     
     /*
     cout << "Number: " << biology.getNumber() << endl;
@@ -26,7 +27,7 @@ int main()
     cout << fixed << setprecision(1) << "Units: " << biology.getUnits() << endl;
     */
      
-    cout << startDate.setDate(1,1,2000).getDate() << endl;
+    cout << biology << endl;
     /*
     cout << endl;
     

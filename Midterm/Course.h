@@ -38,10 +38,10 @@ public:
     Course& setDays(string);
     Course& setUnits(double);
     
-    void setStartDate(int, int, int);            // void?
-    void setEndDate(int, int, int);              // void?
-    void setStartTime(int, int);                 // void?
-    void setEndTime(int, int);                   // void?
+    Course& setStartDate(int, int, int);            // void? or cascade
+    Course& setEndDate(int, int, int);              // void?
+    Course& setStartTime(int, int);                 // void?
+    Course& setEndTime(int, int);                   // void?
     
     double calcDailyDuration() const;
     
