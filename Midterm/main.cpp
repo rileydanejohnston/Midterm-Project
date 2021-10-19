@@ -18,7 +18,7 @@ int main()
     // Course sociology;
     
     biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);
-    biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(12,1).setEndTime(13,9);
+    biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(19,0).setEndTime(1,0);
     
     /*
     cout << "Number: " << biology.getNumber() << endl;
@@ -27,10 +27,7 @@ int main()
     cout << fixed << setprecision(1) << "Units: " << biology.getUnits() << endl;
     */
      
-    cout << biology.getStartDate() << endl;
-    cout << biology.getEndDate() << endl;
-    cout << biology.getStartTime() << endl;
-    cout << biology.getEndTime() << endl;
+    cout << biology << endl;
     /*
     cout << endl;
     

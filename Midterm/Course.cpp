@@ -117,5 +117,5 @@ Course& Course::setEndTime(int hr, int min)
 
 double Course::calcDailyDuration() const
 {
-    return startTime - endTime;
+    return endTime - startTime;
 }

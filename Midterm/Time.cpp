@@ -13,8 +13,6 @@ Time::Time(int hour, int minute)
 
 double Time::operator-(const Time& right) const
 {
-    double timeDifference = 0.0;
-    
     int resultHr = 0;
     int resultMin = 0;
     
@@ -23,29 +21,15 @@ double Time::operator-(const Time& right) const
     int startMin = 0;
     int endMin = 0;
     
-    
-    if (getHour() > right.getHour())            // left is larger by hour
+    // left is larger
+    if (getHour() > right.getHour() || (getHour() == right.getHour() && getMinute() > right.getMinute()))
     {
         endHr = getHour();
         endMin = getMinute();
         startHr = right.getHour();
         startMin = right.getMinute();
     }
-    else if (getHour() < right.getHour())       // right larger by hour
-    {
-        endHr = right.getHour();
-        endMin = right.getMinute();
-        startHr = getHour();
-        startMin = getMinute();
-    }
-    else if (getHour() == right.getHour() && getMinute() > right.getMinute())       // left larger by minutes
-    {
-        startHr = right.getHour();
-        startMin = right.getMinute();
-        endHr = getHour();
-        endMin = getMinute();
-    }
-    else if (getHour() == right.getHour() && getMinute() < right.getMinute())       // right larger by minutes
+    else
     {
         endHr = right.getHour();
         endMin = right.getMinute();
@@ -54,20 +38,16 @@ double Time::operator-(const Time& right) const
     }
     
     
-    if (startMin > endMin)                  // left hours/mins > right hours/mins
+    if (startMin > endMin)
     {
         endHr = endHr - 1;
         endMin = endMin + 60;
     }
     
-    
     resultHr = endHr - startHr;
     resultMin = endMin - startMin;
     
-    
-    timeDifference = resultHr + (resultMin / 60.0);
-    
-    return timeDifference;
+    return resultHr + (resultMin / 60.0);
 }
 
 
