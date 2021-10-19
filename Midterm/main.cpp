@@ -10,7 +10,7 @@
 
 int main()
 {
-    Date startDate(1, 1, 2000);
+    Date startDate;
     Date endDate(4, 1, 2000);
     Time startTime(5, 0);
     Time endTime(1, 5);
@@ -26,7 +26,7 @@ int main()
     cout << fixed << setprecision(1) << "Units: " << biology.getUnits() << endl;
     */
      
-    cout << biology << endl;
+    cout << startDate.setDate(1,1,2000).getDate() << endl;
     /*
     cout << endl;
     

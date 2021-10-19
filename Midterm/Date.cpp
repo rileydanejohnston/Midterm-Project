@@ -10,6 +10,33 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
+istream& operator>>(istream& input, Date& right)
+{
+    int mn = 0;
+    int dy = 0;
+    int yr = 0;
+    
+    input >> mn;
+    input.ignore();
+    input >> dy;
+    input.ignore();
+    input >> yr;
+    
+    mn = right.checkMonth(mn);
+    dy = right.checkDay(dy);
+    yr = right.checkYear(yr);
+    
+    right.setDate(mn, dy, yr);
+    
+    return input;
+}
+
+ostream& operator<<(ostream& output, const Date& right)
+{
+    output << right.getMonth() << '/' << right.getDay() << '/' << right.getYear();
+    return output;
+}
+
 bool Date::operator<=(const Date& right) const
 {
     // check if left is greater than right or equal to
@@ -73,50 +100,55 @@ bool Date::operator>(const Date& right) const
     return false;
 }
 
-istream& operator>>(istream& input, Date& right)
-{
-    int mn = 0;
-    int dy = 0;
-    int yr = 0;
-    
-    input >> mn;
-    input.ignore();
-    input >> dy;
-    input.ignore();
-    input >> yr;
-    
-    mn = right.checkMonth(mn);
-    dy = right.checkDay(dy);
-    yr = right.checkYear(yr);
-    
-    right.setDate(mn, dy, yr);
-    
-    return input;
-}
-
-ostream& operator<<(ostream& output, const Date& right)
-{
-    output << right.getMonth() << '/' << right.getDay() << '/' << right.getYear();
-    return output;
-}
-
 int Date::getMonth() const
 {
     return month;
 }
+
 int Date::getDay() const
 {
     return day;
 }
+
 int Date::getYear() const
 {
     return year;
 }
+
+string Date::getDate() const
+{
+    return to_string(getMonth()) + "/" + to_string(getDay()) + "/" + to_string(getYear());
+}
+
 Date& Date::setMonth(int mn)
 {
     month = checkMonth(mn);
     return *this;
 }
+
+Date& Date::setDay(int dy)
+{
+    day = checkDay(dy);
+    return *this;
+}
+
+Date& Date::setYear(int yr)
+{
+    year = checkYear(yr);
+    return *this;
+}
+
+Date& Date::setDate(int mn, int dy, int yr)
+{
+    month = checkMonth(mn);
+ 
+    year = checkYear(yr);  //could also validate year              // done
+ 
+    day = checkDay(dy);  //to validate the day
+    
+    return *this;
+}
+
 int Date::checkMonth(int mn) const
 {
     if (mn > 0 && mn <= 12)
@@ -126,35 +158,6 @@ int Date::checkMonth(int mn) const
     
     return 1;
 }
-int Date::checkYear(int dy) const
-{
-    if (dy >= 1990 && dy <= 2050)       // validate year is 1990 to 2050
-    {
-        return dy;
-    }
-    
-    return 1990;                    // default is 1990
-}
-Date& Date::setDay(int dy)
-{
-    day = checkDay(dy);
-    return *this;
-}
-Date& Date::setYear(int yr)
-{
-    year = checkYear(yr);
-    return *this;
-}
-
-void Date::setDate(int mn, int dy, int yr)
-{
-    month = checkMonth(mn);
- 
-    year = checkYear(yr);  //could also validate year              // done
- 
-    day = checkDay(dy);  //to validate the day
-}
-
 
 //PRIVATE COST UTILITY FUNCTION
 int Date::checkDay(int testDay) const
@@ -173,4 +176,14 @@ int Date::checkDay(int testDay) const
     }
     
     return 1;  //keep data in valid state
+}
+
+int Date::checkYear(int dy) const
+{
+    if (dy >= 1990 && dy <= 2050)       // validate year is 1990 to 2050
+    {
+        return dy;
+    }
+    
+    return 1990;                    // default is 1990
 }

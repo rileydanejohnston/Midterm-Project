@@ -6,12 +6,13 @@
 #ifndef DATE_H
 #define DATE_H
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Date
 {
-    friend ostream& operator<<(ostream&, const Date&);
-    friend istream& operator>>(istream&, Date&);
+        friend ostream& operator<<(ostream&, const Date&);
+        friend istream& operator>>(istream&, Date&);
     private:
         int month; //1-12
         int day; //1-31 depending on month
@@ -24,20 +25,23 @@ class Date
     public:
         Date(int = 1, int = 1, int = 1990);
     
-        bool operator!=(const Date&) const;
-        bool operator==(const Date&) const;
         bool operator<=(const Date&) const;
         bool operator>=(const Date&) const;
+        bool operator!=(const Date&) const;
+        bool operator==(const Date&) const;
         bool operator<(const Date&) const;
         bool operator>(const Date&) const;
+    
         int getMonth() const;
         int getDay() const;
         int getYear() const;
+        string getDate() const;
+    
+        Date& setDate(int, int, int);
         Date& setMonth(int);
         Date& setDay(int);
         Date& setYear(int);
-    
-        void setDate(int, int, int);
+        
 };
 
 #endif
