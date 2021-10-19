@@ -5,6 +5,7 @@
 #ifndef TIME_H
 #define TIME_H
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Time
@@ -16,6 +17,7 @@ class Time
         int hour;  //0-23 (24 hour clock format)
         int minute; //0-59
         int toUniversal(int, char) const;
+        string toStandard() const;              // converts universal to standard for getTime function
         int checkHours(int) const;        // validate hrs inputted in standard time (1-12)
     public:
         //default constructor
@@ -32,6 +34,7 @@ class Time
         //get functions - (normally always declared const)
         int getHour() const;
         int getMinute() const;
+        string getTime() const;
 
         //print functions - (normally always declared const since they do not modify private members, merely inspect
         void printUniversal() const;

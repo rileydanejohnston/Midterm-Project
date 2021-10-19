@@ -162,7 +162,7 @@ Time& Time::setHour(int h)
 //setMinute function is now set up to enable cascading
 Time& Time::setMinute(int m)
 {
-    minute = (m >= 0 && m < 59) ? m : 0;          //validates minute, if valid set to m, else set to 0
+    minute = (m >= 0 && m <= 59) ? m : 0;          //validates minute, if valid set to m, else set to 0
     return *this;
 }
 
@@ -180,6 +180,25 @@ int Time::getHour() const  //must be const since prototype is const
 int Time::getMinute() const  //must be const since prototype is const
 {
     return minute;
+}
+
+string Time::toStandard() const
+{
+    // convert universal hr to standard hr
+    int hr = (getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12;
+    string strHr = to_string(hr);
+    
+    // add 0 in front of minutes 0 - 9
+    string strMin = (getMinute() >= 0 && getMinute() <= 9) ? "0" + to_string(getMinute()) : to_string(getMinute());
+    
+    string amPm = (getHour() >= 12) ? "PM" : "AM";
+    
+    return strHr + ":" + strMin + " " + amPm;
+}
+
+string Time::getTime() const
+{
+    return toStandard();
 }
 
 
