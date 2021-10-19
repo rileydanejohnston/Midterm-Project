@@ -25,9 +25,9 @@ ostream& operator<<(ostream& output, const Course &right)
 {
     output << fixed << setprecision(2) << "Course Info: " << setw(10) << right.getNumber() << " -- " << right.getName() << endl;
     output << "# of Units: "    << setw(8) << right.getUnits() << endl;
-    output << "Course Dates: "  << setw(3) << right.startDate << " -- " << right.endDate << endl;
+    output << "Course Dates: "  << setw(10) << right.getStartDate() << " -- " << right.getEndDate() << endl;
     output << "Meeting Days: "  << setw(5) << right.getDays() << endl;
-    output << "Meeting Times: " << setw(2) << right.startTime << " -- " << right.endTime << endl;
+    output << "Meeting Times: " << setw(8) << right.getStartTime() << " -- " << right.getEndTime() << endl;
     output << "Daily Duration: " << right.calcDailyDuration() << " hours" << endl;
     
     return output;
@@ -50,22 +50,22 @@ double Course::getUnits() const
 
 string Course::getStartDate() const
 {
-    return startDate.getDate();
+    return startDate.getDateStr();
 }
 
 string Course::getEndDate() const
 {
-    return endDate.getDate();
+    return endDate.getDateStr();
 }
 
 string Course::getStartTime() const
 {
-    return startTime.getTime();
+    return startTime.getTimeStr();
 }
 
 string Course::getEndTime() const
 {
-    return endTime.getTime();
+    return endTime.getTimeStr();
 }
 
 

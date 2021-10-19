@@ -115,7 +115,7 @@ int Date::getYear() const
     return year;
 }
 
-string Date::getDate() const
+string Date::getDateStr() const
 {
     return to_string(getMonth()) + "/" + to_string(getDay()) + "/" + to_string(getYear());
 }

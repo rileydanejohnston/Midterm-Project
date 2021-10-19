@@ -35,7 +35,7 @@ class Date
         int getMonth() const;
         int getDay() const;
         int getYear() const;
-        string getDate() const;
+        string getDateStr() const;
     
         Date& setDate(int, int, int);
         Date& setMonth(int);

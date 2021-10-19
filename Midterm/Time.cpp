@@ -176,7 +176,7 @@ string Time::toStandard() const
     return strHr + ":" + strMin + " " + amPm;
 }
 
-string Time::getTime() const
+string Time::getTimeStr() const
 {
     return toStandard();
 }

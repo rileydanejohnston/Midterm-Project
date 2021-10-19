@@ -34,7 +34,7 @@ class Time
         //get functions - (normally always declared const)
         int getHour() const;
         int getMinute() const;
-        string getTime() const;
+        string getTimeStr() const;
 
         //print functions - (normally always declared const since they do not modify private members, merely inspect
         void printUniversal() const;
