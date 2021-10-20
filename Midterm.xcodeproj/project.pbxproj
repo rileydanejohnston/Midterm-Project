@@ -11,6 +11,7 @@
 		C28FB73327168E1C009DCC65 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB73227168E1C009DCC65 /* main.cpp */; };
 		C28FB73F271696D8009DCC65 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB73E271696D8009DCC65 /* Time.cpp */; };
 		C28FB74227190042009DCC65 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB74127190042009DCC65 /* Date.cpp */; };
+		C2ACF27B271FBB7100FD5D1C /* Semester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2ACF27A271FBB7100FD5D1C /* Semester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		C28FB73E271696D8009DCC65 /* Time.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
 		C28FB7402719000E009DCC65 /* Date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
 		C28FB74127190042009DCC65 /* Date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
+		C2ACF279271FBACE00FD5D1C /* Semester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semester.h; sourceTree = "<group>"; };
+		C2ACF27A271FBB7100FD5D1C /* Semester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Semester.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				C28FB73227168E1C009DCC65 /* main.cpp */,
 				C2847921271BC1EF00A142D0 /* Course.h */,
 				C2847922271BC26200A142D0 /* Course.cpp */,
+				C2ACF279271FBACE00FD5D1C /* Semester.h */,
+				C2ACF27A271FBB7100FD5D1C /* Semester.cpp */,
 			);
 			path = Midterm;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2847924271BC26200A142D0 /* Course.cpp in Sources */,
+				C2ACF27B271FBB7100FD5D1C /* Semester.cpp in Sources */,
 				C28FB74227190042009DCC65 /* Date.cpp in Sources */,
 				C28FB73F271696D8009DCC65 /* Time.cpp in Sources */,
 				C28FB73327168E1C009DCC65 /* main.cpp in Sources */,
