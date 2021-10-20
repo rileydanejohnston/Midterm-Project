@@ -5,20 +5,30 @@
 #include "Time.h"
 #include "Date.h"
 #include "Course.h"
+#include "Semester.h"
 #include <iomanip>      // this is definitely needed
 // need using namespace std since it's in Time/Date/Course?
 
 int main()
 {
-    Date startDate;
-    Date endDate(4, 1, 2000);
+    Date startDate(9, 1, 2021);
+    Date endDate(12, 15, 2021);
     Time startTime(5, 0);
     Time endTime(1, 5);
     Course biology;
+    Semester fall("Fall 2021", startDate, endDate);
     // Course sociology;
     
-    biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);
-    biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(19,0).setEndTime(1,0);
+    cout << fall.getName() << endl;
+    
+    fall.setName("Sprint 2022");
+    
+    cout << fall.getName() << endl;
+    
+    
+    
+    // biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);
+    // biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(19,0).setEndTime(1,0);
     
     /*
     cout << "Number: " << biology.getNumber() << endl;
@@ -27,7 +37,7 @@ int main()
     cout << fixed << setprecision(1) << "Units: " << biology.getUnits() << endl;
     */
      
-    cout << biology << endl;
+    //cout << biology << endl;
     /*
     cout << endl;
     
