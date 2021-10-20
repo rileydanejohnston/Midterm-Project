@@ -10,6 +10,20 @@ Semester::Semester(string nm, const Date &startDt, const Date &endDt)
     setName(nm);
 }
 
+ostream& operator<<(ostream &output, const Semester &right)
+{
+    output << right.getSemester();
+    return output;
+}
+
+/*
+istream& operator>>(istream &input, Semester &right)
+{
+    
+    return input;
+}
+*/
+
 string Semester::getName() const
 {
     return name;
