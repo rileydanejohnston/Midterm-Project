@@ -19,15 +19,18 @@ CourseSchedule::~CourseSchedule()
 
 bool CourseSchedule::checkDates(const Semester &sem, const Date &startDt, const Date &endDt) const
 {
-    // if start date is before semester date
-    // if end date is after semester date
-        // return false
     
-    if (sem.getStartDateInst() > startDt || sem.getEndDateInst() < endDt)
+    // is start date within the semester dates?
+    bool startDateTest = startDt >= sem.getStartDateInst() && startDt <= sem.getEndDateInst();
+    // is end date within the semester dates?
+    bool endDateTest = endDt >= sem.getStartDateInst() && endDt <= sem.getEndDateInst();
+    
+    // if dates are within the semester's date return true
+    if (startDateTest == true && endDateTest == true)
     {
-        return false;
+        return true;
     }
-    return true;
+    return false;
 }
 
 string CourseSchedule::getStudent() const
