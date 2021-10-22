@@ -12,7 +12,7 @@ Semester::Semester(string nm, const Date &startDt, const Date &endDt)
 
 ostream& operator<<(ostream &output, const Semester &right)
 {
-    output << right.getSemester();
+    output << right.getSemesterStr();
     return output;
 }
 
@@ -29,7 +29,7 @@ string Semester::getName() const
     return name;
 }
 
-string Semester::getSemester() const
+string Semester::getSemesterStr() const
 {
     return getName() + " (" + getStartDate() + " - " + getEndDate() + ")";
 }

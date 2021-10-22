@@ -21,7 +21,7 @@ private:
 public:
     Semester(string = "Alex Smith", const Date& = Date(), const Date& = Date());
     
-    string getSemester() const;
+    string getSemesterStr() const;
     string getName() const;
     string getStartDate() const;
     string getEndDate() const;
