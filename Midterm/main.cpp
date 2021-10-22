@@ -20,13 +20,11 @@ int main()
     Semester fall("Fall 2021", startDate, endDate);
     // Course sociology;
     
-    cout << fall.getEndDate() << endl;
-    fall.setEndDate(5,6,2020);
-    cout << fall.getEndDate() << endl;
+    CourseSchedule riley("Riley", fall, 4);
     
-    cout << fall.getSemester() << endl;
-    
-    cout << fall << endl;
+    cout << riley.getStudent() << endl;
+    cout << riley.getSemesterInfo() << endl;
+    cout << riley.getNumCourses() << endl;
     
     
     // biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);

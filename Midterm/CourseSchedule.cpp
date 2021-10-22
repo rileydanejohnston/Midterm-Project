@@ -23,4 +23,14 @@ string CourseSchedule::getStudent() const
     return student;
 }
 
+string CourseSchedule::getSemesterInfo() const
+{
+    return semester.getSemesterStr();
+}
+
+int CourseSchedule::getNumCourses() const
+{
+    return numCourses;
+}
+
 //bool checkDates(const Semester &sem, const Date &startDate, const Date &endDate) const;

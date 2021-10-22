@@ -26,7 +26,7 @@ public:
     ~CourseSchedule();
     
     string getStudent() const;
-    string getSemester() const;
+    string getSemesterInfo() const;
     int getNumCourses() const;
     
     CourseSchedule& setStudent(string);
