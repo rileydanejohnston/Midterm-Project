@@ -17,6 +17,19 @@ CourseSchedule::~CourseSchedule()
     delete [] coursePtr;
 }
 
+bool CourseSchedule::checkDates(const Semester &sem, const Date &startDt, const Date &endDt) const
+{
+    // if start date is before semester date
+    // if end date is after semester date
+        // return false
+    
+    if (sem.getStartDateInst() > startDt || sem.getEndDateInst() < endDt)
+    {
+        return false;
+    }
+    return true;
+}
+
 string CourseSchedule::getStudent() const
 {
     return student;
