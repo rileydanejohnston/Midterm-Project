@@ -18,4 +18,9 @@ CourseSchedule::~CourseSchedule()
     cout << "Course array is free" << endl;
 }
 
+string CourseSchedule::getStudent() const
+{
+    return student;
+}
+
 //bool checkDates(const Semester &sem, const Date &startDate, const Date &endDate) const;
