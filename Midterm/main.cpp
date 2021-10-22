@@ -22,13 +22,7 @@ int main()
     
     CourseSchedule riley("Riley", fall, 4);
     
-    cout << riley.getStudent() << endl;
-    cout << riley.getSemesterInfo() << endl;
-    cout << riley.getNumCourses() << endl;
     
-    riley.setStudent("John");
-    
-    cout << riley.getStudent() << endl;
     
     
     // biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);

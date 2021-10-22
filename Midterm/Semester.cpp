@@ -31,17 +31,27 @@ string Semester::getName() const
 
 string Semester::getSemesterStr() const
 {
-    return getName() + " (" + getStartDate() + " - " + getEndDate() + ")";
+    return getName() + " (" + getStartDateStr() + " - " + getEndDateStr() + ")";
 }
 
-string Semester::getStartDate() const
+string Semester::getStartDateStr() const
 {
     return startDate.getDateStr();
 }
 
-string Semester::getEndDate() const
+string Semester::getEndDateStr() const
 {
     return endDate.getDateStr();
+}
+
+Date Semester::getStartDateInst() const
+{
+    return startDate;
+}
+
+Date Semester::getEndDateInst() const
+{
+    return endDate;
 }
 
 Semester& Semester::setName(string nm)

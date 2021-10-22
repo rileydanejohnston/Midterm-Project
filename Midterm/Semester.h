@@ -23,8 +23,10 @@ public:
     
     string getSemesterStr() const;
     string getName() const;
-    string getStartDate() const;
-    string getEndDate() const;
+    string getStartDateStr() const;
+    string getEndDateStr() const;
+    Date getStartDateInst() const;            // returns instance for comparisons
+    Date getEndDateInst() const;              // returns instance for comparisons
     
     Semester& setName(string);
     Semester& setStartDate(int, int, int);
