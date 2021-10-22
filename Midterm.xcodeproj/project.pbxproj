@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C28376C12722574900B9711C /* CourseSchedule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28376C02722574900B9711C /* CourseSchedule.cpp */; };
 		C2847924271BC26200A142D0 /* Course.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2847922271BC26200A142D0 /* Course.cpp */; };
 		C28FB73327168E1C009DCC65 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB73227168E1C009DCC65 /* main.cpp */; };
 		C28FB73F271696D8009DCC65 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C28FB73E271696D8009DCC65 /* Time.cpp */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C28376BF272256D700B9711C /* CourseSchedule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSchedule.h; sourceTree = "<group>"; };
+		C28376C02722574900B9711C /* CourseSchedule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CourseSchedule.cpp; sourceTree = "<group>"; };
 		C2847921271BC1EF00A142D0 /* Course.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		C2847922271BC26200A142D0 /* Course.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Course.cpp; sourceTree = "<group>"; };
 		C28FB72F27168E1C009DCC65 /* Midterm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Midterm; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,8 @@
 				C2847921271BC1EF00A142D0 /* Course.h */,
 				C2847922271BC26200A142D0 /* Course.cpp */,
 				C2ACF279271FBACE00FD5D1C /* Semester.h */,
+				C28376BF272256D700B9711C /* CourseSchedule.h */,
+				C28376C02722574900B9711C /* CourseSchedule.cpp */,
 				C2ACF27A271FBB7100FD5D1C /* Semester.cpp */,
 			);
 			path = Midterm;
@@ -143,6 +148,7 @@
 				C28FB74227190042009DCC65 /* Date.cpp in Sources */,
 				C28FB73F271696D8009DCC65 /* Time.cpp in Sources */,
 				C28FB73327168E1C009DCC65 /* main.cpp in Sources */,
+				C28376C12722574900B9711C /* CourseSchedule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
