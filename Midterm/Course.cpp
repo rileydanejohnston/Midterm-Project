@@ -25,9 +25,9 @@ ostream& operator<<(ostream& output, const Course &right)
 {
     output << fixed << setprecision(2) << "Course Info: " << setw(10) << right.getNumber() << " -- " << right.getName() << endl;
     output << "# of Units: "    << setw(8) << right.getUnits() << endl;
-    output << "Course Dates: "  << setw(10) << right.getStartDate() << " -- " << right.getEndDate() << endl;
+    output << "Course Dates: "  << setw(10) << right.getStartDateStr() << " -- " << right.getEndDateStr() << endl;
     output << "Meeting Days: "  << setw(5) << right.getDays() << endl;
-    output << "Meeting Times: " << setw(8) << right.getStartTime() << " -- " << right.getEndTime() << endl;
+    output << "Meeting Times: " << setw(8) << right.getStartTimeStr() << " -- " << right.getEndTimeStr() << endl;
     output << "Daily Duration: " << right.calcDailyDuration() << " hours" << endl;
     
     return output;
@@ -48,24 +48,46 @@ double Course::getUnits() const
     return units;
 }
 
-string Course::getStartDate() const
+string Course::getStartDateStr() const
 {
     return startDate.getDateStr();
 }
 
-string Course::getEndDate() const
+string Course::getEndDateStr() const
 {
     return endDate.getDateStr();
 }
 
-string Course::getStartTime() const
+string Course::getStartTimeStr() const
 {
     return startTime.getTimeStr();
 }
 
-string Course::getEndTime() const
+string Course::getEndTimeStr() const
 {
     return endTime.getTimeStr();
+}
+
+
+
+Date Course::getStartDateInst() const
+{
+    return startDate;
+}
+
+Date Course::getEndDateInst() const
+{
+    return endDate;
+}
+
+Time Course::getStartTimeInst() const
+{
+    return startTime;
+}
+
+Time Course::getEndTimeInst() const
+{
+    return endTime;
 }
 
 

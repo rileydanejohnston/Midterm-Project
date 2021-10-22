@@ -16,15 +16,12 @@ int main()
     Date endDate(12, 15, 2021);
     Time startTime(5, 0);
     Time endTime(1, 5);
-    Course biology;
+    Course biology("Bio 101", "Biology", "MWF", 4.0, startDate, endDate, startTime, endTime);
     Semester fall("Fall 2021", startDate, endDate);
     // Course sociology;
     
     CourseSchedule riley("Riley", fall, 4);
-    
-    
-    
-    
+
     // biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);
     // biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(19,0).setEndTime(1,0);
     

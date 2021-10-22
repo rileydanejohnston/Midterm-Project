@@ -32,10 +32,15 @@ public:
     string getDays() const;
     double getUnits() const;
     
-    string getStartDate() const;
-    string getEndDate() const;
-    string getStartTime() const;
-    string getEndTime() const;
+    string getStartDateStr() const;
+    string getEndDateStr() const;
+    string getStartTimeStr() const;
+    string getEndTimeStr() const;
+    
+    Date getStartDateInst() const;
+    Date getEndDateInst() const;
+    Time getStartTimeInst() const;
+    Time getEndTimeInst() const;
     
     // strings const reference?
     Course& setNumber(string);
