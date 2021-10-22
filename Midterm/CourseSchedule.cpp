@@ -15,7 +15,6 @@ CourseSchedule::CourseSchedule(string name, const Semester &sem, const int MAX_N
 CourseSchedule::~CourseSchedule()
 {
     delete [] coursePtr;
-    cout << "Course array is free" << endl;
 }
 
 string CourseSchedule::getStudent() const
@@ -31,6 +30,12 @@ string CourseSchedule::getSemesterInfo() const
 int CourseSchedule::getNumCourses() const
 {
     return numCourses;
+}
+
+CourseSchedule& CourseSchedule::setStudent(string name)
+{
+    student = name;
+    return *this;
 }
 
 //bool checkDates(const Semester &sem, const Date &startDate, const Date &endDate) const;

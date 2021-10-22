@@ -26,6 +26,10 @@ int main()
     cout << riley.getSemesterInfo() << endl;
     cout << riley.getNumCourses() << endl;
     
+    riley.setStudent("John");
+    
+    cout << riley.getStudent() << endl;
+    
     
     // biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);
     // biology.setStartDate(1, 2, 1995).setEndDate(4, 15, 1995).setStartTime(19,0).setEndTime(1,0);
