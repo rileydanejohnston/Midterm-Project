@@ -23,7 +23,7 @@ ostream& operator<<(ostream &output, const CourseSchedule &right)
     output << fixed << setprecision(2) << "CLASS SCHEDULE" << endl;
     output << "----------------------------" << endl;
     output << "Name: "          << right.getStudent() << endl;
-    output << "Semester: "      << right.getSemesterInfo() << endl;
+    output << "Semester: "      << right.getSemesterInst() << endl;
     output << "Total Classes: " << right.getNumCourses() << endl;
     output << "----------------------------" << endl;
     
@@ -62,9 +62,14 @@ string CourseSchedule::getStudent() const
     return student;
 }
 
-string CourseSchedule::getSemesterInfo() const
+string CourseSchedule::getSemesterStr() const
 {
     return semester.getSemesterStr();
+}
+
+Semester CourseSchedule::getSemesterInst() const
+{
+    return semester;
 }
 
 int CourseSchedule::getNumCourses() const
