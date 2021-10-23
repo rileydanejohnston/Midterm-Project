@@ -54,4 +54,16 @@ CourseSchedule& CourseSchedule::setStudent(string name)
     return *this;
 }
 
-//bool checkDates(const Semester &sem, const Date &startDate, const Date &endDate) const;
+CourseSchedule& CourseSchedule::addCourse(const Course& newClass)
+{
+    // test if class dates are within semester
+    bool testClass = checkDates(semester, newClass.getStartDateInst(), newClass.getEndDateInst());
+    
+    if (testClass == true && getNumCourses() <= MAX_SIZE)
+    {
+        coursePtr[getNumCourses()] = newClass;      // memberwise assignment
+        ++numCourses;
+    }
+    
+    return *this;
+}
