@@ -14,13 +14,22 @@ int main()
 {
     Date startDate(9, 1, 2021);
     Date endDate(12, 15, 2021);
+    
+    Date badStartDate(8, 1, 2021);
+    Date badEndDate(1, 15, 2022);
+    
     Time startTime(5, 0);
     Time endTime(1, 5);
     Course biology("Bio 101", "Biology", "MWF", 4.0, startDate, endDate, startTime, endTime);
+    Course math("Stats 101", "Math", "TTH", 3.5, badStartDate, badEndDate, startTime, endTime);
     Semester fall("Fall 2021", startDate, endDate);
     // Course sociology;
     
     CourseSchedule riley("Riley", fall, 4);
+    
+    riley.addCourse(biology).addCourse(biology).addCourse(math);
+    
+    cout << riley;
 
     
     // biology.setNumber("Bio 101").setName("Biology").setDays("TTH").setUnits(4.0);

@@ -12,7 +12,7 @@ using namespace std;
 
 class CourseSchedule
 {
-    friend ostream& operator<<(ostream &output, const CourseSchedule& right);
+    friend ostream& operator<<(ostream&, const CourseSchedule&);
 private:
     string student;
     Semester semester;
