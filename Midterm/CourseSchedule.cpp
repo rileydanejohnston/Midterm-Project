@@ -5,7 +5,7 @@
 #include "CourseSchedule.h"
 #include <iomanip>
 
-CourseSchedule::CourseSchedule(string name, const Semester &sem, const int MAX_NUM)
+CourseSchedule::CourseSchedule(const string &name, const Semester &sem, const int MAX_NUM)
 :semester(sem), MAX_SIZE(MAX_NUM)
 {
     student = name;
@@ -67,7 +67,7 @@ int CourseSchedule::getNumCourses() const
     return numCourses;
 }
 
-CourseSchedule& CourseSchedule::setStudent(string name)
+CourseSchedule& CourseSchedule::setStudent(const string &name)
 {
     student = name;
     return *this;

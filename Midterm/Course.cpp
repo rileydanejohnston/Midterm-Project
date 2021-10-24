@@ -5,7 +5,7 @@
 #include "Course.h"
 #include <iomanip>
 
-Course::Course(string num, string title, string meetDays, double numUnits, const Date &startDt, const Date &endDt, const Time &startTm, const Time &endTm)
+Course::Course(const string &num, const string &title, const string &meetDays, double numUnits, const Date &startDt, const Date &endDt, const Time &startTm, const Time &endTm)
 :startDate(startDt), endDate(endDt), startTime(startTm), endTime(endTm)
 {
     setNumber(num).setName(title).setDays(meetDays).setUnits(numUnits);
@@ -69,17 +69,17 @@ Time Course::getEndTimeInst() const
 }
 
 
-Course& Course::setNumber(string num)
+Course& Course::setNumber(const string &num)
 {
     number = num;
     return *this;
 }
-Course& Course::setName(string title)
+Course& Course::setName(const string &title)
 {
     name = title;
     return *this;
 }
-Course& Course::setDays(string meetDays)
+Course& Course::setDays(const string &meetDays)
 {
     days = meetDays;
     return *this;

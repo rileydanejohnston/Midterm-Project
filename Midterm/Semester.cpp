@@ -4,7 +4,7 @@
 
 #include "Semester.h"
 
-Semester::Semester(string nm, const Date &startDt, const Date &endDt)
+Semester::Semester(const string &nm, const Date &startDt, const Date &endDt)
 : startDate(startDt), endDate(endDt)
 {
     setName(nm);
@@ -39,7 +39,7 @@ Date Semester::getEndDateInst() const
     return endDate;
 }
 
-Semester& Semester::setName(string nm)
+Semester& Semester::setName(const string &nm)
 {
     name = nm;
     return *this;

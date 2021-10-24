@@ -24,7 +24,7 @@ private:
     Time endTime;
 public:
     // strings const reference?
-    Course(string = "CS 101", string = "Intro to Computers", string = "MWF", double = 3.0, const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
+    Course(const string& = "CS 101", const string& = "Intro to Computers", const string& = "MWF", double = 3.0, const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
     ~Course();
     
     string getNumber() const;
@@ -38,9 +38,9 @@ public:
     Time getEndTimeInst() const;
     
     // strings const reference?
-    Course& setNumber(string);
-    Course& setName(string);
-    Course& setDays(string);
+    Course& setNumber(const string&);
+    Course& setName(const string&);
+    Course& setDays(const string&);
     Course& setUnits(double);
     
     Course& setStartDate(int, int, int);            // void? or cascade

@@ -22,14 +22,14 @@ private:
     
     bool checkDates(const Semester&, const Date&, const Date&) const;
 public:
-    CourseSchedule(string = "Alex Smith", const Semester& = Semester(), const int = 4);
+    CourseSchedule(const string& = "Alex Smith", const Semester& = Semester(), const int = 4);
     ~CourseSchedule();
     
     string getStudent() const;
     Semester getSemesterInst() const;
     int getNumCourses() const;
     
-    CourseSchedule& setStudent(string);
+    CourseSchedule& setStudent(const string&);
     CourseSchedule& addCourse(const Course&);        // cascading?
     // CourseSchedule& removeCourse(const Course&);
 };
