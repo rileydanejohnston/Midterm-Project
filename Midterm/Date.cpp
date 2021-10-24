@@ -70,6 +70,7 @@ bool Date::operator==(const Date& right) const
     }
     return false;
 }
+
 bool Date::operator<(const Date& right) const
 {
     if (!(*this > right) && *this != right)
@@ -113,11 +114,6 @@ int Date::getDay() const
 int Date::getYear() const
 {
     return year;
-}
-
-string Date::getDateStr() const
-{
-    return to_string(getMonth()) + "/" + to_string(getDay()) + "/" + to_string(getYear());
 }
 
 Date& Date::setMonth(int mn)

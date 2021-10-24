@@ -21,10 +21,7 @@ private:
 public:
     Semester(string = "Alex Smith", const Date& = Date(), const Date& = Date());
     
-    string getSemesterStr() const;
     string getName() const;
-    string getStartDateStr() const;
-    string getEndDateStr() const;
     Date getStartDateInst() const;            // returns instance for comparisons
     Date getEndDateInst() const;              // returns instance for comparisons
     

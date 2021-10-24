@@ -57,11 +57,6 @@ string CourseSchedule::getStudent() const
     return student;
 }
 
-string CourseSchedule::getSemesterStr() const
-{
-    return semester.getSemesterStr();
-}
-
 Semester CourseSchedule::getSemesterInst() const
 {
     return semester;

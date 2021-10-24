@@ -32,9 +32,6 @@ public:
     string getDays() const;
     double getUnits() const;
     
-    string getStartDateStr() const;
-    string getEndDateStr() const;
-    
     Date getStartDateInst() const;
     Date getEndDateInst() const;
     Time getStartTimeInst() const;
