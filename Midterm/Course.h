@@ -34,8 +34,6 @@ public:
     
     string getStartDateStr() const;
     string getEndDateStr() const;
-    string getStartTimeStr() const;
-    string getEndTimeStr() const;
     
     Date getStartDateInst() const;
     Date getEndDateInst() const;

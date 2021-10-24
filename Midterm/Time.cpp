@@ -121,7 +121,6 @@ int Time::toUniversal(int hr, char amPm) const
     return hr + 12;
 }
 
-
 //setTime function now is set up to enable cascading
 Time& Time::setTime(int hour, int minute)
 {
@@ -130,14 +129,12 @@ Time& Time::setTime(int hour, int minute)
     return *this;
 }
 
-
 //setHour function is now set up to enable cascading
 Time& Time::setHour(int h)
 {
     hour = (h >= 0 && h < 24) ? h : 0;            //validates hour, if valid set to h, else set to 0
     return *this;
 }
-
 
 //setMinute function is now set up to enable cascading
 Time& Time::setMinute(int m)
@@ -146,52 +143,23 @@ Time& Time::setMinute(int m)
     return *this;
 }
 
-
-/*GET FUNCTIONS:  Do not modify private member data normally always const*/
-
-//get Hour
-int Time::getHour() const  //must be const since prototype is const
+int Time::getHour() const
 {
     return hour;
 }
 
-
-//get Minute
-int Time::getMinute() const  //must be const since prototype is const
+int Time::getMinute() const
 {
     return minute;
 }
 
-string Time::toStandard() const
-{
-    // convert universal hr to standard hr
-    int hr = (getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12;
-    string strHr = to_string(hr);
-    
-    // add 0 in front of minutes 0 - 9
-    string strMin = (getMinute() >= 0 && getMinute() <= 9) ? "0" + to_string(getMinute()) : to_string(getMinute());
-    
-    string amPm = (getHour() >= 12) ? "PM" : "AM";
-    
-    return strHr + ":" + strMin + " " + amPm;
-}
-
-string Time::getTimeStr() const
-{
-    return toStandard();
-}
-
-
-/*PRINT FUNCTIONS:  Normally do not modify private member data so should be const*/
-
-void Time::printUniversal()const  //must be const since prototype is const
+void Time::printUniversal()const
 {
      cout << setfill('0') << setw(2) << hour << ":"
           << setw(2) << minute << setw(2) << endl;
 }
 
-
-void Time::printStandard()const  //must be const since prototype is const
+void Time::printStandard()const
 {
      cout << ((hour == 0 || hour == 12) ? 12 : hour % 12) << ":"
           << setfill ('0') << setw(2) << minute << " "
