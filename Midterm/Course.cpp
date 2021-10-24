@@ -23,11 +23,11 @@ string Course::getNumber() const
 
 ostream& operator<<(ostream& output, const Course &right)
 {
-    output << fixed << setprecision(2) << "Course Info: " << setw(10) << right.getNumber() << " -- " << right.getName() << endl;
-    output << "# of Units: "    << setw(8) << right.getUnits() << endl;
-    output << "Course Dates: "  << setw(10) << right.getStartDateInst() << " -- " << right.getEndDateInst() << endl;
-    output << "Meeting Days: "  << setw(5) << right.getDays() << endl;
-    output << "Meeting Times: " << setw(8) << right.getStartTimeInst() << " -- " << right.getEndTimeInst() << endl;
+    output << fixed << setprecision(2) << "Course Info: " << right.getNumber() << " -- " << right.getName() << endl;
+    output << "# of Units: "    << right.getUnits() << endl;
+    output << "Course Dates: "  << right.getStartDateInst() << " -- " << right.getEndDateInst() << endl;
+    output << "Meeting Days: "  << right.getDays() << endl;
+    output << "Meeting Times: " << right.getStartTimeInst() << " -- " << right.getEndTimeInst() << endl;
     output << "Daily Duration: " << right.calcDailyDuration() << " hours" << endl;
     
     return output;
