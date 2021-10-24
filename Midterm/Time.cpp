@@ -53,9 +53,9 @@ double Time::operator-(const Time& right) const
 
 ostream& operator<<(ostream& output, const Time& right)
 {
-    output << ((right.hour == 0 || right.hour == 12) ? 12 : right.hour % 12) << ":"
-         << setfill ('0') << setw(2) << right.minute << " "
-         << setw(2) << (right.hour < 12 ? "AM" : "PM" );
+    output << ((right.getHour() == 0 || right.getHour() == 12) ? 12 : right.getHour() % 12) << ":"
+         << setfill ('0') << setw(2) << right.getMinute() << " "
+         << setw(2) << (right.getHour() < 12 ? "AM" : "PM" );
     
     return output;
 }
@@ -155,13 +155,13 @@ int Time::getMinute() const
 
 void Time::printUniversal()const
 {
-     cout << setfill('0') << setw(2) << hour << ":"
-          << setw(2) << minute << setw(2) << endl;
+     cout << setfill('0') << setw(2) << getHour() << ":"
+          << setw(2) << getMinute() << setw(2) << endl;
 }
 
 void Time::printStandard()const
 {
-     cout << ((hour == 0 || hour == 12) ? 12 : hour % 12) << ":"
-          << setfill ('0') << setw(2) << minute << " "
-          << setw(2) << (hour < 12 ? "AM" : "PM" )<< endl;
+     cout << ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12) << ":"
+          << setfill ('0') << setw(2) << getMinute() << " "
+          << setw(2) << (getHour() < 12 ? "AM" : "PM" )<< endl;
 }

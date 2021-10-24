@@ -160,13 +160,13 @@ int Date::checkDay(int testDay) const
 {
     static const int daysPerMonth[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
     
-    if (testDay > 0 && testDay <= daysPerMonth[month])
+    if (testDay > 0 && testDay <= daysPerMonth[getMonth()])
     {
      return testDay;
     }
     
     //determine whether testDay is valid for a specific month
-    if (month == 2 && testDay == 29 && (year  % 400 == 0 || (year % 4  == 0 && year % 100 != 0)))
+    if (getMonth() == 2 && testDay == 29 && (getYear()  % 400 == 0 || (getYear() % 4  == 0 && getYear() % 100 != 0)))
     {
       return testDay;
     }

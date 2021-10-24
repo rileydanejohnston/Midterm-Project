@@ -8,7 +8,7 @@
 CourseSchedule::CourseSchedule(const string &name, const Semester &sem, const int MAX_NUM)
 :semester(sem), MAX_SIZE(MAX_NUM)
 {
-    student = name;
+    setStudent(name);
     numCourses = 0;
     coursePtr = new Course[MAX_SIZE];
 }
@@ -76,7 +76,7 @@ CourseSchedule& CourseSchedule::setStudent(const string &name)
 CourseSchedule& CourseSchedule::addCourse(const Course& newClass)
 {
     // test if class dates are within semester
-    bool testClass = checkDates(semester, newClass.getStartDateInst(), newClass.getEndDateInst());
+    bool testClass = checkDates(getSemesterInst(), newClass.getStartDateInst(), newClass.getEndDateInst());
     
     if (testClass == true && getNumCourses() <= MAX_SIZE)
     {
