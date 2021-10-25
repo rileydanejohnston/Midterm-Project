@@ -12,7 +12,7 @@ using namespace std;
 
 class Semester {
     friend ostream& operator<<(ostream&, const Semester&);
-    // friend istream& operator>>(istream&, Semester&);
+    friend istream& operator>>(istream&, Semester&);
     
 private:
     string name;
