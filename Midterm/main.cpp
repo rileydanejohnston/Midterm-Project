@@ -12,26 +12,31 @@
 
 int main()
 {
-    // get user name
-    // get semester name
-    // get sem start date
-    // get sem end date
-    char menuSelect;
-    string name;
+    string studentName;
+    string semesterName;
+    Date startDate;
+    Date endDate;
     int maxClasses;
-    Semester userSem;
-    
+    char menuSelect;
     
     cout << "Please enter your name: ";
-    getline(cin, name);
+    getline(cin, studentName);
     
-    cout << "Enter the: start date(mm/dd/yyyy), end date (mm/dd/yyyy) and the Semester name (ex fall), " << endl;
-    cout << "Please include a space between each value" << endl;
-    cin >> userSem;
+    cout << "Semester start date (mm/dd/yyyy): ";
+    cin >> startDate;
     
-    cout << "Please enter the maximum number of classes you can take: ";
+    cout << "Semester end date (mm/dd/yyyy): ";
+    cin >> endDate;
+    cin.ignore();
+    
+    cout << "Semester name (Fall 2021): ";
+    getline(cin, semesterName);
+    
+    cout << "Max number of classes: ";
     cin >> maxClasses;
-    CourseSchedule userSchedule(name, userSem, maxClasses);
+    
+    Semester userSem(semesterName, startDate, endDate);
+    CourseSchedule userSchedule(studentName, userSem, maxClasses);
      
     do
     {
