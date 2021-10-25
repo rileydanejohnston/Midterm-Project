@@ -29,11 +29,12 @@ int main()
     cin >> endDate;
     cin.ignore();
     
-    cout << "Semester name (Fall 2021): ";
+    cout << "Semester name (ex. 'Fall 2021'): ";
     getline(cin, semesterName);
     
     cout << "Max number of classes: ";
     cin >> maxClasses;
+    cin.ignore();
     
     Semester userSem(semesterName, startDate, endDate);
     CourseSchedule userSchedule(studentName, userSem, maxClasses);
