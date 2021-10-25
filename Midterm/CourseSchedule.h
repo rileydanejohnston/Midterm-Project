@@ -28,6 +28,7 @@ public:
     string getStudent() const;
     Semester getSemesterInst() const;
     int getNumCourses() const;
+    int getMaxCourses() const;
     
     CourseSchedule& setStudent(const string&);
     CourseSchedule& addCourse(const Course&);        // cascading?

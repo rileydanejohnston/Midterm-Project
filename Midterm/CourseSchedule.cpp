@@ -67,6 +67,11 @@ int CourseSchedule::getNumCourses() const
     return numCourses;
 }
 
+int CourseSchedule::getMaxCourses() const
+{
+    return MAX_SIZE;
+}
+
 CourseSchedule& CourseSchedule::setStudent(const string &name)
 {
     student = name;
@@ -78,7 +83,7 @@ CourseSchedule& CourseSchedule::addCourse(const Course& newClass)
     // test if class dates are within semester
     bool testClass = checkDates(getSemesterInst(), newClass.getStartDateInst(), newClass.getEndDateInst());
     
-    if (testClass == true && getNumCourses() <= MAX_SIZE)
+    if (testClass == true && getNumCourses() <= getMaxCourses())
     {
         coursePtr[getNumCourses()] = newClass;      // memberwise assignment
         ++numCourses;

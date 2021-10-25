@@ -30,10 +30,9 @@ int main()
     cout << "Please enter the maximum number of classes you can take: ";
     cin >> maxClasses;
     
+    CourseSchedule userSchedule(name, userSem, maxClasses);
     
-    cout << name << endl;
-    cout << maxClasses << endl;
-    cout << userSem << endl;
+    cout << userSchedule << endl;
     
     
     return 0;
