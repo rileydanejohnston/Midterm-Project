@@ -19,6 +19,15 @@ ostream& operator<<(ostream &output, const Semester &right)
 /*
 istream& operator>>(istream &input, Semester &right)
 {
+    string semName;
+    Date startDt;
+    Date endDt;
+    
+    getline(input, semName);
+    input >> startDt;
+    input >> endDt;
+    
+    right.setName(semName).setStartDate(startDt).setEndDate(endDt);
     
     return input;
 }
@@ -45,9 +54,21 @@ Semester& Semester::setName(const string &nm)
     return *this;
 }
 
+Semester& Semester::setStartDate(const Date &startDt)
+{
+    startDate.setDate(startDt);
+    return *this;
+}
+
 Semester& Semester::setStartDate(int mn, int dy, int yr)
 {
     startDate.setDate(mn, dy, yr);
+    return *this;
+}
+
+Semester& Semester::setEndDate(const Date &endDt)
+{
+    endDate.setDate(endDt);
     return *this;
 }
 

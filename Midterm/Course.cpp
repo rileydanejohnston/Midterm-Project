@@ -96,10 +96,21 @@ Course& Course::setStartDate(int mn, int dy, int yr)
     startDate.setDate(mn, dy, yr);
     return *this;
 }
+Course& Course::setStartDate(const Date &startDt)
+{
+    startDate.setDate(startDt);
+    return *this;
+}
 
 Course& Course::setEndDate(int mn, int dy, int yr)
 {
     endDate.setDate(mn, dy, yr);
+    return *this;
+}
+
+Course& Course::setEndDate(const Date &endDt)
+{
+    endDate.setDate(endDt);
     return *this;
 }
 
@@ -109,9 +120,21 @@ Course& Course::setStartTime(int hr, int min)
     return *this;
 }
 
+Course& Course::setStartTime(const Time &startTm)
+{
+    startTime.setTime(startTm);
+    return *this;
+}
+
 Course& Course::setEndTime(int hr, int min)
 {
     endTime.setTime(hr, min);
+    return *this;
+}
+
+Course& Course::setEndTime(const Time &endTm)
+{
+    endTime.setTime(endTm);
     return *this;
 }
 

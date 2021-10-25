@@ -25,6 +25,7 @@ class Time
 
         //set functions - not const since they modify private data
         //The & return type enables cascading
+        Time& setTime(const Time&);
         Time& setTime(int, int);
         Time& setHour(int);
         Time& setMinute(int);

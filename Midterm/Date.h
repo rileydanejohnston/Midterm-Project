@@ -36,6 +36,7 @@ class Date
         int getYear() const;
     
         Date& setDate(int, int, int);
+        Date& setDate(const Date&);
         Date& setMonth(int);
         Date& setDay(int);
         Date& setYear(int);

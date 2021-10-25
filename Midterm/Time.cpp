@@ -121,6 +121,13 @@ int Time::toUniversal(int hr, char amPm) const
     return hr + 12;
 }
 
+Time& Time::setTime(const Time &newTime)
+{
+    setHour(newTime.getHour());
+    setMinute(newTime.getMinute());
+    return *this;
+}
+
 //setTime function now is set up to enable cascading
 Time& Time::setTime(int hour, int minute)
 {

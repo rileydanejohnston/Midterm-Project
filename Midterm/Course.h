@@ -44,9 +44,13 @@ public:
     Course& setUnits(double);
     
     Course& setStartDate(int, int, int);            // void? or cascade
+    Course& setStartDate(const Date&);
     Course& setEndDate(int, int, int);              // void?
+    Course& setEndDate(const Date&);
     Course& setStartTime(int, int);                 // void?
+    Course& setStartTime(const Time&);
     Course& setEndTime(int, int);                   // void?
+    Course& setEndTime(const Time&);
     
     double calcDailyDuration() const;
     

@@ -26,8 +26,10 @@ public:
     Date getEndDateInst() const;              // returns instance for comparisons
     
     Semester& setName(const string&);
+    Semester& setStartDate(const Date&);
     Semester& setStartDate(int, int, int);
     Semester& setEndDate(int, int, int);
+    Semester& setEndDate(const Date&);
 };
 
 #endif /* Semester_h */
