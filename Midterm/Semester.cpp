@@ -7,12 +7,12 @@
 Semester::Semester(const string &nm, const Date &startDt, const Date &endDt)
 : startDate(startDt), endDate(endDt)
 {
-    setName(nm);
+    setSemName(nm);
 }
 
 ostream& operator<<(ostream &output, const Semester &right)
 {
-    output << right.getName() << " (" << right.getStartDateInst() << " - " << right.getEndDateInst() << ")";
+    output << right.getSemName() << " (" << right.getStartDateInst() << " - " << right.getEndDateInst() << ")";
     return output;
 }
 
@@ -28,13 +28,13 @@ istream& operator>>(istream &input, Semester &right)
     input.ignore();             // ignore space in keyboard buffer
     getline(cin, semName);
     
-    right.setName(semName).setStartDate(start).setEndDate(end);
+    right.setSemName(semName).setStartDate(start).setEndDate(end);
     
     return input;
 }
 
 
-string Semester::getName() const
+string Semester::getSemName() const
 {
     return name;
 }
@@ -49,9 +49,7 @@ Date Semester::getEndDateInst() const
     return endDate;
 }
 
-Semester
-
-Semester& Semester::setName(const string &nm)
+Semester& Semester::setSemName(const string &nm)
 {
     name = nm;
     return *this;

@@ -21,11 +21,11 @@ private:
 public:
     Semester(const string& = "Alex Smith", const Date& = Date(), const Date& = Date());
     
-    string getName() const;
+    string getSemName() const;
     Date getStartDateInst() const;            // returns instance for comparisons
     Date getEndDateInst() const;              // returns instance for comparisons
     
-    Semester& setName(const string&);
+    Semester& setSemName(const string&);
     Semester& setStartDate(const Date&);
     Semester& setStartDate(int, int, int);
     Semester& setEndDate(int, int, int);

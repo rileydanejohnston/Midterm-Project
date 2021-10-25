@@ -12,14 +12,29 @@
 
 int main()
 {
+    // get user name
+    // get semester name
+    // get sem start date
+    // get sem end date
+    string name;
+    int maxClasses;
+    Semester userSem;
     
-    Semester fall;
+    cout << "Please enter your name: ";
+    getline(cin, name);
     
     cout << "Enter the: start date(mm/dd/yyyy), end date (mm/dd/yyyy) and the Semester name (ex fall), " << endl;
     cout << "Please include a space between each value" << endl;
-    cin >> fall;
+    cin >> userSem;
     
-    cout << fall << endl;
+    cout << "Please enter the maximum number of classes you can take: ";
+    cin >> maxClasses;
+    
+    
+    cout << name << endl;
+    cout << maxClasses << endl;
+    cout << userSem << endl;
+    
     
     return 0;
 }
