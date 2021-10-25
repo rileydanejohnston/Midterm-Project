@@ -10,7 +10,20 @@ CourseSchedule::CourseSchedule(const string &name, const Semester &sem, const in
 {
     setStudent(name);
     numCourses = 0;
-    coursePtr = new Course[MAX_SIZE];
+    coursePtr = new Course[getMaxCourses()];
+}
+
+CourseSchedule::CourseSchedule(const CourseSchedule &csToCopy)
+:semester(csToCopy.getSemesterInst()), MAX_SIZE(csToCopy.getMaxCourses())
+{
+    setStudent(csToCopy.getStudent());
+    numCourses = csToCopy.getNumCourses();
+    coursePtr = new Course[getMaxCourses()];
+    
+    for (int i = 0; i < getMaxCourses(); ++i)
+    {
+        coursePtr[i] = csToCopy.coursePtr[i];
+    }
 }
 
 CourseSchedule::~CourseSchedule()

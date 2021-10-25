@@ -23,6 +23,7 @@ private:
     bool checkDates(const Semester&, const Date&, const Date&) const;
 public:
     CourseSchedule(const string& = "Alex Smith", const Semester& = Semester(), const int = 4);
+    CourseSchedule(const CourseSchedule&);
     ~CourseSchedule();
     
     string getStudent() const;
