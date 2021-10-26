@@ -91,7 +91,7 @@ CourseSchedule& CourseSchedule::setStudent(const string &name)
     return *this;
 }
 
-CourseSchedule& CourseSchedule::addCourse(const Course& newClass)
+bool CourseSchedule::addCourse(const Course& newClass)
 {
     // test if class dates are within semester
     bool testClass = checkDates(getSemesterInst(), newClass.getStartDateInst(), newClass.getEndDateInst());
@@ -100,7 +100,41 @@ CourseSchedule& CourseSchedule::addCourse(const Course& newClass)
     {
         coursePtr[getNumCourses()] = newClass;      // memberwise assignment
         ++numCourses;
+        return true;
     }
     
-    return *this;
+    return false;
+}
+
+bool CourseSchedule::removeCourse(int classNum)
+{
+    int arrayBound = getNumCourses() - 1;
+    
+    // validate input
+    if (classNum < 1 || classNum > getNumCourses())
+    {
+        return false;
+    }
+    
+    classNum = classNum - 1;        // represents array position
+    
+    for (int i = classNum; i < arrayBound; ++i)
+    {
+        coursePtr[i] = coursePtr[ i + 1 ];
+    }
+    
+    --numCourses;               // decrease number of classes by 1
+    return true;
+}
+
+void CourseSchedule::dropCourseDisplay() const
+{
+    cout << "Which class do you want to delete?" << endl;;
+
+    for (int i = 0; i < getNumCourses(); ++i)
+    {
+        cout << i + 1 << ") " << coursePtr[i].getNumber() << endl;
+    }
+    
+    cout << "Selection (enter an integer): ";
 }

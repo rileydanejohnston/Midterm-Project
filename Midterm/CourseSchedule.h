@@ -32,8 +32,9 @@ public:
     int getMaxCourses() const;
     
     CourseSchedule& setStudent(const string&);
-    CourseSchedule& addCourse(const Course&);        // cascading?
-    // CourseSchedule& removeCourse(const Course&);
+                bool addCourse(const Course&);      // const?
+                bool removeCourse(int);             // const?
+    void dropCourseDisplay() const;
 };
 
 #endif

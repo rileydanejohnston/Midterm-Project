@@ -80,6 +80,7 @@ istream& operator>>(istream& input, Time& right)
     input.ignore();                     // ignore colon
     input >> min;
     input >> amPm;
+    input.ignore();
     
     hr = right.checkHours(hr);        // validate hrs is standard (1-12)
 
