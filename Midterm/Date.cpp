@@ -134,17 +134,6 @@ Date& Date::setYear(int yr)
     return *this;
 }
 
-Date& Date::setDate(const Date &newDate)
-{
-    int mn = checkMonth(newDate.getMonth());
-    int dy = checkDay(newDate.getDay());
-    int yr = checkYear(newDate.getYear());
-    
-    setDate(mn, dy, yr);
-    
-    return *this;
-}
-
 Date& Date::setDate(int mn, int dy, int yr)
 {
     month = checkMonth(mn);

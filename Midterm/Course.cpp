@@ -98,7 +98,7 @@ Course& Course::setStartDate(int mn, int dy, int yr)
 }
 Course& Course::setStartDate(const Date &startDt)
 {
-    startDate.setDate(startDt);
+    startDate.setDate(startDt.getMonth(), startDt.getDay(), startDt.getYear());
     return *this;
 }
 
@@ -110,7 +110,7 @@ Course& Course::setEndDate(int mn, int dy, int yr)
 
 Course& Course::setEndDate(const Date &endDt)
 {
-    endDate.setDate(endDt);
+    endDate.setDate(endDt.getMonth(), endDt.getDay(), endDt.getYear());
     return *this;
 }
 
