@@ -7,8 +7,6 @@
 
 #include "Semester.h"
 #include "Course.h"
-#include <iostream>
-using namespace std;
 
 class CourseSchedule
 {

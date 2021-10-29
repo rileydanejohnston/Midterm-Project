@@ -24,7 +24,7 @@ private:
     Time endTime;
 public:
     // strings const reference?
-    Course(const string& = "CS 101", const string& = "Intro to Computers", const string& = "MWF", double = 3.0, const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
+    Course(const string& = "CS 101", const string& = "Intro to Computers", const string& = "MWF", const double = 3.0, const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
     ~Course();
     
     string getNumber() const;

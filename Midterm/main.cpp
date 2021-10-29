@@ -2,13 +2,8 @@
 // CS137
 // Midterm
 
-#include "Time.h"
-#include "Date.h"
-#include "Course.h"
-#include "Semester.h"
+
 #include "CourseSchedule.h"
-#include <iomanip>      // this is definitely needed
-// need using namespace std since it's in Time/Date/Course?
 
 int main()
 {
@@ -17,9 +12,7 @@ int main()
     Date semStartDt;
     Date semEndDt;
     int maxClasses = 0;
-    char menuSelect = '0';
-    
-    bool addNewCourse;
+    char menuSelect = 0;
     
     string courseNum;
     string courseName;
@@ -69,8 +62,6 @@ int main()
         
         if (menuSelect == '1')
         {
-            cout << "You selected " << menuSelect << endl;
-            
             // check # of courses - saves time
             if (userSchedule.getNumCourses() == userSchedule.getMaxCourses())
             {
@@ -104,9 +95,7 @@ int main()
                 
                 Course userCourse(courseNum, courseName, courseDays, courseUnits, classStartDt, classEndDt, classStartTime, classEndTime);
                 
-                addNewCourse = userSchedule.addCourse(userCourse);
-                
-                if (addNewCourse == false)
+                if (userSchedule.addCourse(userCourse) == false)
                 {
                     cout << endl;
                     cout << "The course date(s) are not within the semester. The course was not added." << endl;
@@ -120,16 +109,23 @@ int main()
         }
         else if (menuSelect == '2')
         {
-            userSchedule.dropCourseDisplay();
-            cin >> deleteCourse;
-            
-            if (userSchedule.removeCourse(deleteCourse) == true)
+            if (userSchedule.getNumCourses() == 0)
             {
-                cout << "Success! The course was deleted." << endl;
+                cout << "Error! You aren't enrolled in any classes." << endl;
             }
             else
             {
-                cout << "Invalid selection. The course was not deleted." << endl;
+                userSchedule.dropCourseDisplay();
+                cin >> deleteCourse;
+                
+                if (userSchedule.removeCourse(deleteCourse) == true)
+                {
+                    cout << "Success! The course was deleted." << endl;
+                }
+                else
+                {
+                    cout << "Invalid selection. The course was not deleted." << endl;
+                }
             }
         }
         else if (menuSelect == '3')
