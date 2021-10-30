@@ -122,7 +122,7 @@ Course& Course::setStartTime(int hr, int min)
 
 Course& Course::setStartTime(const Time &startTm)
 {
-    startTime.setTime(startTm);
+    startTime.setTime(startTm.getHour(), startTm.getMinute());
     return *this;
 }
 
@@ -134,7 +134,7 @@ Course& Course::setEndTime(int hr, int min)
 
 Course& Course::setEndTime(const Time &endTm)
 {
-    endTime.setTime(endTm);
+    endTime.setTime(endTm.getHour(), endTm.getMinute());
     return *this;
 }
 
