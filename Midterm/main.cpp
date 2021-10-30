@@ -15,22 +15,21 @@ int main()
 {
     string studentName;
     string semesterName;
-    Date semStartDt;
-    Date semEndDt;
-    int maxClasses = 0;
-    char menuSelect = 0;
-    
     string courseNum;
     string courseName;
     string courseDays;
+    
+    int deleteCourse = 0;
+    int maxClasses = 0;
+    char menuSelect = 0;
     double courseUnits = 0.0;
     
     Time classStartTime;
     Time classEndTime;
     Date classStartDt;
     Date classEndDt;
-    
-    int deleteCourse = 0;
+    Date semStartDt;
+    Date semEndDt;
     
     cout << "Please enter your name: ";
     getline(cin, studentName);
