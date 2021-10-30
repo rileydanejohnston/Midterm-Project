@@ -1,9 +1,15 @@
-// Riley Johnston
+// Last Minute Coders -- Riley Johnston, Christian Napuli, Mateo Zettor, David Akopyan
 // CS137
-// Midterm
+// Midterm Project
 
-
+#include "Date.h"
+#include "Time.h"
+#include "Course.h"
+#include "Semester.h"
 #include "CourseSchedule.h"
+#include <string>
+#include <iostream>
+using namespace std;
 
 int main()
 {
@@ -143,8 +149,6 @@ int main()
         
     }
     while (menuSelect != 'q' && menuSelect != 'Q');
-    
-    
     
     return 0;
 }

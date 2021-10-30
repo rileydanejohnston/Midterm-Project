@@ -1,12 +1,15 @@
-// Riley Johnston
+// Last Minute Coders -- Riley Johnston, Christian Napuli, Mateo Zettor, David Akopyan
 // CS137
-// Midterm
+// Midterm Project
 
 #ifndef COURSESCHEDULE_H
 #define COURSESCHEDULE_H
 
 #include "Semester.h"
 #include "Course.h"
+#include <string>
+#include <iostream>
+using namespace std;
 
 class CourseSchedule
 {
